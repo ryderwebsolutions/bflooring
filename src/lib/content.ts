@@ -32,58 +32,76 @@ export type Service = {
   id: string;
   title: string;
   description: string;
-  icon: "supply" | "timber" | "laminate" | "vinyl" | "prep" | "repair" | "building";
+  image: string;
+  alt: string;
 };
 
+// Each service links to a stock placeholder photo (see the note above
+// galleryItems) so the services list can show a real floor instead of a
+// generic icon. Swap `image`/`alt` for real project photos when available.
 export const services: Service[] = [
   {
     id: "supply-fitting",
     title: "Flooring Supply & Fitting",
     description:
       "Supply and fitting handled as one job, so what you're quoted is what gets fitted.",
-    icon: "supply",
+    image:
+      "https://images.unsplash.com/photo-1646592491741-e79ae5953486?q=80&w=1600&auto=format&fit=crop",
+    alt: "Stock photo of an empty open-plan room with a timber floor and staircase, used as a placeholder image",
   },
   {
     id: "timber",
     title: "Timber Flooring",
     description:
       "Solid and engineered timber floors fitted with an eye for grain, joins and finish.",
-    icon: "timber",
+    image:
+      "https://images.unsplash.com/photo-1722650363568-9f250806ec58?q=80&w=1600&auto=format&fit=crop",
+    alt: "Stock photo of an empty bedroom with a checkerboard parquet timber floor, used as a placeholder image",
   },
   {
     id: "laminate",
     title: "Laminate Flooring",
     description:
       "Durable, low-maintenance laminate fitted tight and level, room to room.",
-    icon: "laminate",
+    image:
+      "https://images.unsplash.com/photo-1722650273431-9aefddd19151?q=80&w=1600&auto=format&fit=crop",
+    alt: "Stock photo of an empty bedroom with light laminate flooring, used as a placeholder image",
   },
   {
     id: "vinyl",
     title: "Vinyl Flooring",
     description:
       "Water-resistant vinyl fitted for kitchens, bathrooms and busy family rooms.",
-    icon: "vinyl",
+    image:
+      "https://images.unsplash.com/photo-1722348675233-e3af1abd4023?q=80&w=1600&auto=format&fit=crop",
+    alt: "Stock photo of a small empty room with a grey tiled-effect floor, used as a placeholder image",
   },
   {
     id: "prep",
     title: "Floor Preparation",
     description:
       "Subfloors levelled and prepped properly before a single board goes down.",
-    icon: "prep",
+    image:
+      "https://images.unsplash.com/photo-1727872496300-57e476478a54?q=80&w=1600&auto=format&fit=crop",
+    alt: "Stock photo of an empty hallway leading into a bright room with a timber floor, used as a placeholder image",
   },
   {
     id: "repairs",
     title: "Repairs & Finishing",
     description:
       "Damaged boards, worn finishes and uneven patches repaired and refinished.",
-    icon: "repair",
+    image:
+      "https://images.unsplash.com/photo-1722603929404-b29f53884a35?q=80&w=1600&auto=format&fit=crop",
+    alt: "Stock photo of an empty entrance hallway with a honey-toned timber floor, used as a placeholder image",
   },
   {
     id: "commercial",
     title: "Domestic & Commercial Flooring",
     description:
       "Homes and business premises both fitted to the same professional standard.",
-    icon: "building",
+    image:
+      "https://images.unsplash.com/photo-1722650363577-b1f6e1c191e3?q=80&w=1600&auto=format&fit=crop",
+    alt: "Stock photo of an empty room with a built-in wardrobe and honey-toned timber floor, used as a placeholder image",
   },
 ];
 

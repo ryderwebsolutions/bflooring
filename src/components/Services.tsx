@@ -1,7 +1,14 @@
-import { services, type Service } from "@/lib/content";
+"use client";
+
+import { useState } from "react";
+import Image from "next/image";
+import { services } from "@/lib/content";
 import Reveal from "@/components/Reveal";
 
 export default function Services() {
+  const [activeId, setActiveId] = useState(services[0].id);
+  const activeIndex = services.findIndex((s) => s.id === activeId);
+
   return (
     <section id="services" className="bg-cream py-20 sm:py-28">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
@@ -15,98 +22,85 @@ export default function Services() {
           </p>
         </Reveal>
 
-        <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {services.map((service, i) => (
-            <Reveal key={service.id} delayMs={(i % 3) * 60}>
-              <div className="flex h-full flex-col rounded-2xl border border-taupe/20 bg-white/50 p-6">
-                <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-full bg-brand/10 text-brand">
-                  <ServiceIcon icon={service.icon} />
-                </div>
-                <h3 className="font-heading text-lg font-bold text-charcoal">
-                  {service.title}
-                </h3>
-                <p className="mt-2 text-sm leading-relaxed text-charcoal/70">
-                  {service.description}
-                </p>
-              </div>
-            </Reveal>
-          ))}
+        <div className="mt-12 grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-12">
+          <div className="lg:col-span-6 xl:col-span-5">
+            <ul className="border-t border-charcoal/10">
+              {services.map((service, i) => {
+                const active = service.id === activeId;
+                return (
+                  <li key={service.id} className="border-b border-charcoal/10">
+                    <button
+                      type="button"
+                      onMouseEnter={() => setActiveId(service.id)}
+                      onFocus={() => setActiveId(service.id)}
+                      onClick={() => setActiveId(service.id)}
+                      aria-pressed={active}
+                      className="group flex w-full items-start gap-4 py-5 text-left transition-colors"
+                    >
+                      <span
+                        className={`font-heading text-2xl font-bold tabular-nums text-brand transition-colors ${
+                          active ? "lg:text-brand" : "lg:text-charcoal/30"
+                        }`}
+                      >
+                        {String(i + 1).padStart(2, "0")}
+                      </span>
+                      <span className="flex-1">
+                        <span
+                          className={`block font-heading text-lg font-bold text-charcoal transition-colors sm:text-xl ${
+                            active ? "lg:text-charcoal" : "lg:text-charcoal/60"
+                          }`}
+                        >
+                          {service.title}
+                        </span>
+                        <span
+                          className={`mt-1 hidden text-sm leading-relaxed transition-opacity lg:block ${
+                            active ? "text-charcoal/70 opacity-100" : "opacity-0"
+                          }`}
+                        >
+                          {service.description}
+                        </span>
+                        <span className="mt-3 flex items-center gap-3 lg:hidden">
+                          <span className="relative h-16 w-16 shrink-0 overflow-hidden rounded-lg">
+                            <Image
+                              src={service.image}
+                              alt={service.alt}
+                              fill
+                              loading="lazy"
+                              sizes="64px"
+                              className="object-cover"
+                            />
+                          </span>
+                          <span className="text-sm leading-relaxed text-charcoal/70">
+                            {service.description}
+                          </span>
+                        </span>
+                      </span>
+                    </button>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+
+          <div className="hidden lg:col-span-6 lg:block xl:col-span-7">
+            <div className="sticky top-28 aspect-[4/5] overflow-hidden rounded-2xl">
+              {services.map((service, i) => (
+                <Image
+                  key={service.id}
+                  src={service.image}
+                  alt={service.alt}
+                  fill
+                  loading={i === 0 ? "eager" : "lazy"}
+                  sizes="(min-width: 1024px) 45vw, 0px"
+                  className={`object-cover transition-opacity duration-500 ease-out ${
+                    i === activeIndex ? "opacity-100" : "opacity-0"
+                  }`}
+                />
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>
   );
-}
-
-function ServiceIcon({ icon }: { icon: Service["icon"] }) {
-  const common = {
-    width: 22,
-    height: 22,
-    viewBox: "0 0 24 24",
-    fill: "none" as const,
-    "aria-hidden": true as const,
-  };
-
-  switch (icon) {
-    case "supply":
-      return (
-        <svg {...common}>
-          <path d="M3 7l9-4 9 4-9 4-9-4z" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round" />
-          <path d="M3 7v10l9 4 9-4V7" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round" />
-        </svg>
-      );
-    case "timber":
-      return (
-        <svg {...common}>
-          <rect x="3" y="5" width="18" height="4" rx="0.5" stroke="currentColor" strokeWidth="1.6" />
-          <rect x="3" y="10.5" width="11" height="4" rx="0.5" stroke="currentColor" strokeWidth="1.6" />
-          <rect x="15.5" y="10.5" width="5.5" height="4" rx="0.5" stroke="currentColor" strokeWidth="1.6" />
-          <rect x="3" y="16" width="6" height="4" rx="0.5" stroke="currentColor" strokeWidth="1.6" />
-          <rect x="10" y="16" width="11" height="4" rx="0.5" stroke="currentColor" strokeWidth="1.6" />
-        </svg>
-      );
-    case "laminate":
-      return (
-        <svg {...common}>
-          <path d="M3 4h18v16H3z" stroke="currentColor" strokeWidth="1.6" />
-          <path d="M3 10h18M9 4v16M15 4v6M15 14v6" stroke="currentColor" strokeWidth="1.6" />
-        </svg>
-      );
-    case "vinyl":
-      return (
-        <svg {...common}>
-          <circle cx="12" cy="12" r="8.5" stroke="currentColor" strokeWidth="1.6" />
-          <circle cx="12" cy="12" r="3" stroke="currentColor" strokeWidth="1.6" />
-          <path d="M12 3.5v3M12 17.5v3M20.5 12h-3M6.5 12h-3" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
-        </svg>
-      );
-    case "prep":
-      return (
-        <svg {...common}>
-          <path d="M4 20l6.5-6.5M20 4l-6.5 6.5" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
-          <path d="M13 8l3-3 3 3-3 3-3-3z" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round" />
-          <path d="M4 20l3-1 1-3" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round" />
-        </svg>
-      );
-    case "repair":
-      return (
-        <svg {...common}>
-          <path
-            d="M14.7 6.3a3 3 0 0 0-4.2 4.2L4 17v3h3l6.5-6.5a3 3 0 0 0 4.2-4.2l-2.1 2.1-2-2 2.1-2.1z"
-            stroke="currentColor"
-            strokeWidth="1.6"
-            strokeLinejoin="round"
-          />
-        </svg>
-      );
-    case "building":
-      return (
-        <svg {...common}>
-          <path d="M4 20V9l6-4 6 4v11" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round" />
-          <path d="M14 20v-7h6v7" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round" />
-          <path d="M8 12h1M8 15h1M11 12h1M11 15h1" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
-        </svg>
-      );
-    default:
-      return null;
-  }
 }
