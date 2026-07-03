@@ -301,7 +301,7 @@ export const faqs: Faq[] = [
 
 export const trustBadges = [
   "Domestic & Commercial",
-  "[CONFIRM: Fully Insured?]",
+  "Fully Insured",
   "Dublin, Meath & Louth",
 ];
 

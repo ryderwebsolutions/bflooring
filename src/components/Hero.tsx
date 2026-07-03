@@ -41,7 +41,7 @@ export default function Hero() {
             rel="noopener noreferrer"
             className="flex h-14 items-center justify-center gap-2 rounded-full bg-whatsapp px-8 text-base font-semibold text-white transition-colors hover:bg-whatsapp-dark"
           >
-            <WhatsAppIcon /> WhatsApp Philip
+            <WhatsAppIcon /> WhatsApp
           </a>
         </div>
 

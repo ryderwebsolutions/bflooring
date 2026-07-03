@@ -36,7 +36,7 @@ export default function Contact({
               rel="noopener noreferrer"
               className="flex h-14 items-center justify-center gap-3 rounded-full bg-whatsapp px-6 text-base font-semibold text-white transition-colors hover:bg-whatsapp-dark"
             >
-              <WhatsAppIcon /> WhatsApp Philip
+              <WhatsAppIcon /> WhatsApp
             </a>
             <a
               href={business.emailUrl}

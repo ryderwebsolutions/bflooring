@@ -9,64 +9,71 @@ export default function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-cream/95 backdrop-blur border-b border-taupe/20">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        <div className="flex h-16 items-center justify-between md:h-20">
-          <Link href="/" aria-label={`${business.name} — Home`} className="flex items-center">
-            <Image
-              src="/logo-transparent.png"
-              alt={`${business.name} logo`}
-              width={110}
-              height={117}
-              priority
-              className="h-12 w-auto md:h-14"
-            />
-          </Link>
+    <header className="sticky top-0 z-50">
+      {/* backdrop-blur lives here, one level in, rather than on <header>
+          itself. A backdrop-filter on an ancestor becomes the containing
+          block for any position:fixed descendant — which was collapsing
+          the mobile menu overlay below to zero height (it's a DOM child
+          of <header>), letting the hero show straight through it. */}
+      <div className="bg-cream/95 backdrop-blur border-b border-taupe/20">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div className="flex h-16 items-center justify-between md:h-20">
+            <Link href="/" aria-label={`${business.name} — Home`} className="flex items-center">
+              <Image
+                src="/logo-transparent.png"
+                alt={`${business.name} logo`}
+                width={110}
+                height={117}
+                priority
+                className="h-12 w-auto md:h-14"
+              />
+            </Link>
 
-          <nav className="hidden lg:flex lg:items-center lg:gap-8">
-            {nav.map((item) => (
+            <nav className="hidden lg:flex lg:items-center lg:gap-8">
+              {nav.map((item) => (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  className="text-sm font-medium text-charcoal/80 transition-colors hover:text-brand"
+                >
+                  {item.label}
+                </a>
+              ))}
+            </nav>
+
+            <div className="hidden lg:flex lg:items-center lg:gap-5">
               <a
-                key={item.href}
-                href={item.href}
+                href={business.phoneTel}
                 className="text-sm font-medium text-charcoal/80 transition-colors hover:text-brand"
               >
-                {item.label}
+                {business.phoneDisplay}
               </a>
-            ))}
-          </nav>
+              <Link
+                href="/#contact"
+                className="inline-flex h-11 items-center justify-center rounded-full bg-brand px-6 text-sm font-semibold text-cream transition-colors hover:bg-brand-dark"
+              >
+                Get a Free Quote
+              </Link>
+            </div>
 
-          <div className="hidden lg:flex lg:items-center lg:gap-5">
-            <a
-              href={business.phoneTel}
-              className="text-sm font-medium text-charcoal/80 transition-colors hover:text-brand"
-            >
-              {business.phoneDisplay}
-            </a>
-            <Link
-              href="/#contact"
-              className="inline-flex h-11 items-center justify-center rounded-full bg-brand px-6 text-sm font-semibold text-cream transition-colors hover:bg-brand-dark"
-            >
-              Get a Free Quote
-            </Link>
-          </div>
-
-          <div className="flex items-center gap-2 lg:hidden">
-            <a
-              href={business.phoneTel}
-              aria-label={`Call Philip B Flooring on ${business.phoneDisplay}`}
-              className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-brand text-cream"
-            >
-              <PhoneIcon />
-            </a>
-            <button
-              type="button"
-              aria-label={open ? "Close menu" : "Open menu"}
-              aria-expanded={open}
-              onClick={() => setOpen((v) => !v)}
-              className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-charcoal/15 text-charcoal"
-            >
-              {open ? <CloseIcon /> : <MenuIcon />}
-            </button>
+            <div className="flex items-center gap-2 lg:hidden">
+              <a
+                href={business.phoneTel}
+                aria-label={`Call Philip B Flooring on ${business.phoneDisplay}`}
+                className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-brand text-cream"
+              >
+                <PhoneIcon />
+              </a>
+              <button
+                type="button"
+                aria-label={open ? "Close menu" : "Open menu"}
+                aria-expanded={open}
+                onClick={() => setOpen((v) => !v)}
+                className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-charcoal/15 text-charcoal"
+              >
+                {open ? <CloseIcon /> : <MenuIcon />}
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -90,7 +97,7 @@ export default function Header() {
               href={business.phoneTel}
               className="flex h-14 items-center justify-center gap-2 rounded-full bg-brand text-base font-semibold text-cream"
             >
-              <PhoneIcon /> Call Philip
+              <PhoneIcon /> Call
             </a>
             <a
               href={business.whatsappUrl}
@@ -98,7 +105,7 @@ export default function Header() {
               rel="noopener noreferrer"
               className="flex h-14 items-center justify-center gap-2 rounded-full bg-whatsapp text-base font-semibold text-white"
             >
-              <WhatsAppIcon /> WhatsApp Philip
+              <WhatsAppIcon /> WhatsApp
             </a>
           </div>
         </div>
