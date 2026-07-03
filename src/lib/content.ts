@@ -25,6 +25,7 @@ export const nav = [
   { label: "Why Us", href: "/#why-us" },
   { label: "Process", href: "/#process" },
   { label: "Areas We Cover", href: "/#areas" },
+  { label: "FAQ", href: "/#faq" },
   { label: "Contact", href: "/#contact" },
 ];
 
@@ -256,6 +257,45 @@ export const processSteps: ProcessStep[] = [
     step: 4,
     title: "Floor fitted",
     description: "Fitted to a professional finish, on time.",
+  },
+];
+
+export type Faq = {
+  question: string;
+  answer: string;
+};
+
+// Only questions answerable from the verified facts in this file. No
+// invented policies on turnaround time, deposits, or guarantees.
+export const faqs: Faq[] = [
+  {
+    question: "Do you supply the flooring, or do I need to buy it myself?",
+    answer:
+      "Either way works. Philip can supply the flooring as part of the job, or fit flooring you've already bought.",
+  },
+  {
+    question: "What types of flooring do you fit?",
+    answer:
+      "Timber, laminate and vinyl, along with floor preparation and repairs on existing floors.",
+  },
+  {
+    question: "What areas do you cover?",
+    answer: "Dublin, Meath and Louth.",
+  },
+  {
+    question: "Do you only do homes, or businesses too?",
+    answer:
+      "Both. Homes and business premises are fitted to the same professional standard.",
+  },
+  {
+    question: "What happens after I get in touch?",
+    answer:
+      "Philip talks through the room and the flooring you have in mind, then gives you a straight quote. If you're happy to go ahead, the floor gets fitted.",
+  },
+  {
+    question: "Can you fix an existing floor instead of replacing it?",
+    answer:
+      "Often, yes. Damaged boards, worn finishes and uneven patches can usually be repaired and refinished rather than ripped out.",
   },
 ];
 

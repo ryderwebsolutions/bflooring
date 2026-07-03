@@ -3,7 +3,7 @@ import Reveal from "@/components/Reveal";
 
 export default function ServiceAreas() {
   return (
-    <section id="areas" className="bg-cream py-20 sm:py-28">
+    <section id="areas" className="bg-sand py-20 sm:py-28">
       <div className="mx-auto max-w-6xl px-4 text-center sm:px-6 lg:px-8">
         <Reveal>
           <h2 className="font-heading text-3xl font-bold tracking-tight text-charcoal sm:text-4xl">

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Archivo, Inter } from "next/font/google";
 import "./globals.css";
-import { business } from "@/lib/content";
+import { business, heroImage } from "@/lib/content";
 import StickyMobileCta from "@/components/StickyMobileCta";
 
 const archivo = Archivo({
@@ -21,10 +21,16 @@ const siteUrl = "https://www.philipbflooring.ie";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title:
-    "Philip B Flooring | Timber, Laminate & Vinyl Flooring — Dublin, Meath & Louth",
+  title: {
+    default:
+      "Philip B Flooring | Timber, Laminate & Vinyl Flooring — Dublin, Meath & Louth",
+    template: "%s | Philip B Flooring",
+  },
   description:
     "Timber, laminate and vinyl flooring fitted for homes and businesses across Dublin, Meath and Louth. Get a free quote from Philip B Flooring.",
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     title: "Philip B Flooring | Timber, Laminate & Vinyl Flooring",
     description:
@@ -35,20 +41,30 @@ export const metadata: Metadata = {
     locale: "en_IE",
     images: [
       {
-        url: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=1200&auto=format&fit=crop",
+        url: heroImage.src,
         width: 1200,
         height: 630,
-        alt: "A bright living room with warm timber flooring",
+        alt: heroImage.alt,
       },
     ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Philip B Flooring | Timber, Laminate & Vinyl Flooring",
+    description:
+      "Timber, laminate and vinyl flooring fitted for homes and businesses across Dublin, Meath and Louth.",
+    images: [heroImage.src],
   },
 };
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
+  "@type": "HomeAndConstructionBusiness",
+  "@id": `${siteUrl}/#business`,
   name: business.name,
   description: business.tagline,
+  url: siteUrl,
+  image: heroImage.src,
   telephone: business.phoneDisplay,
   email: business.email,
   areaServed: business.areas,
@@ -71,6 +87,12 @@ export default function RootLayout({
       className={`${archivo.variable} ${inter.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col font-sans bg-cream text-charcoal">
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-lg focus:bg-brand focus:px-5 focus:py-3 focus:text-sm focus:font-semibold focus:text-cream"
+        >
+          Skip to main content
+        </a>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

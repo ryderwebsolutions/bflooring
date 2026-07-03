@@ -5,17 +5,32 @@ import Footer from "@/components/Footer";
 import GalleryGrid from "@/components/GalleryGrid";
 import { galleryItems, business } from "@/lib/content";
 
+const title = "Our Work";
+const description =
+  "A look at timber, laminate and vinyl flooring projects from Philip B Flooring, serving Dublin, Meath and Louth.";
+
 export const metadata: Metadata = {
-  title: "Our Work | Philip B Flooring",
-  description:
-    "A look at timber, laminate and vinyl flooring projects from Philip B Flooring, serving Dublin, Meath and Louth.",
+  title,
+  description,
+  alternates: {
+    canonical: "/our-work",
+  },
+  openGraph: {
+    title: `${title} | Philip B Flooring`,
+    description,
+    url: "/our-work",
+  },
+  twitter: {
+    title: `${title} | Philip B Flooring`,
+    description,
+  },
 };
 
 export default function OurWorkPage() {
   return (
     <>
       <Header />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         <section className="py-16 sm:py-24">
           <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand">

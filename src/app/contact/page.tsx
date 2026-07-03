@@ -3,18 +3,33 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Contact from "@/components/Contact";
 
+const title = "Get a Free Quote";
+const description =
+  "Request a free flooring quote from Philip B Flooring — call, WhatsApp, email or send your details for a job in Dublin, Meath or Louth.";
+
 export const metadata: Metadata = {
-  title: "Get a Free Quote | Philip B Flooring",
-  description:
-    "Request a free flooring quote from Philip B Flooring — call, WhatsApp, email or send your details for a job in Dublin, Meath or Louth.",
+  title,
+  description,
+  alternates: {
+    canonical: "/contact",
+  },
+  openGraph: {
+    title: `${title} | Philip B Flooring`,
+    description,
+    url: "/contact",
+  },
+  twitter: {
+    title: `${title} | Philip B Flooring`,
+    description,
+  },
 };
 
 export default function ContactPage() {
   return (
     <>
       <Header />
-      <main className="flex-1 pt-8">
-        <Contact />
+      <main id="main-content" className="flex-1 pt-8">
+        <Contact headingLevel="h1" />
       </main>
       <Footer />
     </>

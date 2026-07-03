@@ -78,7 +78,7 @@ export default function GalleryGrid({
       </div>
 
       {filtered.length === 0 && (
-        <p className="py-12 text-center text-charcoal/60">
+        <p className="py-12 text-center text-charcoal/70">
           No projects in this category yet.
         </p>
       )}

@@ -7,7 +7,7 @@ export default function Gallery() {
   const featured = galleryItems.slice(0, 6);
 
   return (
-    <section id="gallery" className="bg-cream py-20 sm:py-28">
+    <section id="gallery" className="bg-sand py-20 sm:py-28">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <Reveal>
           <h2 className="max-w-xl font-heading text-3xl font-bold tracking-tight text-charcoal sm:text-4xl">

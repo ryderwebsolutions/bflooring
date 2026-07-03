@@ -6,6 +6,7 @@ import WhyUs from "@/components/WhyUs";
 import Testimonials from "@/components/Testimonials";
 import Process from "@/components/Process";
 import ServiceAreas from "@/components/ServiceAreas";
+import Faq from "@/components/Faq";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
@@ -13,7 +14,7 @@ export default function Home() {
   return (
     <>
       <Header />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         <Hero />
         <Services />
         <Gallery />
@@ -21,6 +22,7 @@ export default function Home() {
         <Testimonials />
         <Process />
         <ServiceAreas />
+        <Faq />
         <Contact />
       </main>
       <Footer />

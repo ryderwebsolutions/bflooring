@@ -13,6 +13,12 @@ export default function Footer() {
               {business.name}
             </p>
             <p className="mt-2 text-sm">{business.tagline}</p>
+            <Link
+              href="/#contact"
+              className="mt-5 inline-flex h-12 items-center justify-center rounded-full bg-brand px-6 text-sm font-semibold text-cream transition-colors hover:bg-brand-dark"
+            >
+              Get a Free Quote
+            </Link>
           </div>
 
           <div>

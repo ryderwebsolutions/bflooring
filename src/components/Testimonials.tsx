@@ -13,10 +13,10 @@ export default function Testimonials() {
       <section className="bg-cream py-16 sm:py-20">
         <div className="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
           <Reveal>
-            <p className="font-heading text-xl font-bold text-charcoal sm:text-2xl">
+            <h2 className="font-heading text-xl font-bold text-charcoal sm:text-2xl">
               Reviews coming soon
-            </p>
-            <p className="mt-3 text-sm text-charcoal/60 sm:text-base">
+            </h2>
+            <p className="mt-3 text-sm text-charcoal/70 sm:text-base">
               We&apos;re building up a page of real client reviews — check back
               soon, or ask Philip directly when you get in touch.
             </p>
@@ -29,7 +29,13 @@ export default function Testimonials() {
   return (
     <section className="bg-cream py-20 sm:py-28">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <Reveal>
+          <h2 className="max-w-xl font-heading text-3xl font-bold tracking-tight text-charcoal sm:text-4xl">
+            What Clients Say
+          </h2>
+        </Reveal>
+
+        <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {testimonials.map((t) => (
             <Reveal key={t.id}>
               <figure className="h-full rounded-2xl border border-taupe/20 bg-white/50 p-6">

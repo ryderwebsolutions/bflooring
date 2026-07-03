@@ -28,6 +28,7 @@ export default function ContactForm() {
   const [form, setForm] = useState<FormState>(initialState);
   const [errors, setErrors] = useState<Partial<Record<keyof FormState, string>>>({});
   const [submitted, setSubmitted] = useState(false);
+  const [honeypot, setHoneypot] = useState("");
 
   function updateField<K extends keyof FormState>(field: K, value: FormState[K]) {
     setForm((prev) => ({ ...prev, [field]: value }));
@@ -54,6 +55,15 @@ export default function ContactForm() {
 
   function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
+
+    // Honeypot: real visitors never see or fill this field. If it has a
+    // value, the submission almost certainly came from a bot — silently
+    // pretend to succeed rather than sending anything or tipping it off.
+    if (honeypot.trim()) {
+      setSubmitted(true);
+      return;
+    }
+
     if (!validate()) return;
 
     // TODO: Connect a real form backend here (e.g. Formspree, a serverless
@@ -70,6 +80,23 @@ export default function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit} noValidate className="space-y-5">
+      {/* Honeypot: hidden from real visitors (off-screen, not display:none
+          so simple bots that skip hidden fields still fill it), never
+          rendered as a visible/announced field for keyboard or screen
+          reader users. */}
+      <div className="absolute left-[-9999px] top-auto h-0 w-0 overflow-hidden" aria-hidden="true">
+        <label htmlFor="company">Company</label>
+        <input
+          id="company"
+          name="company"
+          type="text"
+          tabIndex={-1}
+          autoComplete="off"
+          value={honeypot}
+          onChange={(e) => setHoneypot(e.target.value)}
+        />
+      </div>
+
       <div>
         <label htmlFor="name" className="mb-1.5 block text-sm font-medium text-charcoal">
           Name
@@ -115,7 +142,7 @@ export default function ContactForm() {
 
         <div>
           <label htmlFor="email" className="mb-1.5 block text-sm font-medium text-charcoal">
-            Email <span className="font-normal text-charcoal/50">(optional)</span>
+            Email <span className="font-normal text-charcoal/70">(optional)</span>
           </label>
           <input
             id="email"
@@ -138,7 +165,7 @@ export default function ContactForm() {
       <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
         <div>
           <label htmlFor="area" className="mb-1.5 block text-sm font-medium text-charcoal">
-            Area / Town <span className="font-normal text-charcoal/50">(optional)</span>
+            Area / Town <span className="font-normal text-charcoal/70">(optional)</span>
           </label>
           <input
             id="area"
@@ -151,7 +178,7 @@ export default function ContactForm() {
 
         <div>
           <label htmlFor="flooringType" className="mb-1.5 block text-sm font-medium text-charcoal">
-            Type of Flooring <span className="font-normal text-charcoal/50">(optional)</span>
+            Type of Flooring <span className="font-normal text-charcoal/70">(optional)</span>
           </label>
           <select
             id="flooringType"
@@ -192,7 +219,7 @@ export default function ContactForm() {
 
       <div>
         <label htmlFor="photo" className="mb-1.5 block text-sm font-medium text-charcoal">
-          Photo of the space <span className="font-normal text-charcoal/50">(optional)</span>
+          Photo of the space <span className="font-normal text-charcoal/70">(optional)</span>
         </label>
         {/* Photo attachments need a real form backend to actually receive the
             file — a mailto: link cannot carry attachments. The field is kept
@@ -211,6 +238,11 @@ export default function ContactForm() {
       >
         Get a Free Quote
       </button>
+
+      <p className="text-xs text-charcoal/70">
+        Your details are only ever used to reply to your enquiry — never
+        shared or used for anything else.
+      </p>
 
       {submitted && (
         <p role="status" className="text-sm text-charcoal/70">

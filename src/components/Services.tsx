@@ -46,6 +46,8 @@ export default function Services() {
                       </span>
                       <span className="flex-1">
                         <span
+                          role="heading"
+                          aria-level={3}
                           className={`block font-heading text-lg font-bold text-charcoal transition-colors sm:text-xl ${
                             active ? "lg:text-charcoal" : "lg:text-charcoal/60"
                           }`}

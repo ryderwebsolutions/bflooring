@@ -3,14 +3,20 @@ import ContactForm from "@/components/ContactForm";
 import Reveal from "@/components/Reveal";
 import { PhoneIcon, WhatsAppIcon } from "@/components/Header";
 
-export default function Contact() {
+export default function Contact({
+  headingLevel = "h2",
+}: {
+  headingLevel?: "h1" | "h2";
+}) {
+  const Heading = headingLevel;
+
   return (
     <section id="contact" className="bg-cream py-20 sm:py-28">
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         <Reveal>
-          <h2 className="font-heading text-3xl font-bold tracking-tight text-charcoal sm:text-4xl">
+          <Heading className="font-heading text-3xl font-bold tracking-tight text-charcoal sm:text-4xl">
             Get Your Free Quote
-          </h2>
+          </Heading>
           <p className="mt-4 max-w-lg text-base text-charcoal/70 sm:text-lg">
             Send over a few details and Philip will get back to you, or skip
             the form and get in touch directly.
