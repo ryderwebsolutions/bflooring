@@ -241,7 +241,7 @@ export const processSteps: ProcessStep[] = [
   {
     step: 1,
     title: "Get in touch",
-    description: "Call, WhatsApp, or send the quote form.",
+    description: "Call, WhatsApp, or email Philip directly.",
   },
   {
     step: 2,

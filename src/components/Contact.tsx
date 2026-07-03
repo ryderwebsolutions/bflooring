@@ -1,5 +1,4 @@
 import { business } from "@/lib/content";
-import ContactForm from "@/components/ContactForm";
 import Reveal from "@/components/Reveal";
 import { PhoneIcon, WhatsAppIcon } from "@/components/Header";
 
@@ -12,58 +11,49 @@ export default function Contact({
 
   return (
     <section id="contact" className="bg-cream py-20 sm:py-28">
-      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-2xl px-4 text-center sm:px-6 lg:px-8">
         <Reveal>
           <Heading className="font-heading text-3xl font-bold tracking-tight text-charcoal sm:text-4xl">
             Get Your Free Quote
           </Heading>
-          <p className="mt-4 max-w-lg text-base text-charcoal/70 sm:text-lg">
-            Send over a few details and Philip will get back to you, or skip
-            the form and get in touch directly.
+          <p className="mt-4 text-base text-charcoal/70 sm:text-lg">
+            Call, WhatsApp, email or find us on Instagram — whichever&apos;s
+            easiest, Philip will get back to you.
           </p>
         </Reveal>
 
-        <div className="mt-10 grid grid-cols-1 gap-10 lg:grid-cols-5 lg:gap-16">
-          <Reveal className="lg:col-span-3">
-            <ContactForm />
-          </Reveal>
-
-          <Reveal delayMs={80} className="lg:col-span-2">
-            <div className="flex flex-col gap-3 rounded-2xl border border-taupe/20 bg-white/50 p-6">
-              <h3 className="font-heading text-lg font-bold text-charcoal">
-                Prefer to skip the form?
-              </h3>
-              <a
-                href={business.phoneTel}
-                className="flex h-14 items-center gap-3 rounded-full bg-brand px-6 text-base font-semibold text-cream transition-colors hover:bg-brand-dark"
-              >
-                <PhoneIcon /> Call {business.phoneDisplay}
-              </a>
-              <a
-                href={business.whatsappUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex h-14 items-center gap-3 rounded-full bg-whatsapp px-6 text-base font-semibold text-white transition-colors hover:bg-whatsapp-dark"
-              >
-                <WhatsAppIcon /> WhatsApp Philip
-              </a>
-              <a
-                href={business.emailUrl}
-                className="flex h-14 items-center gap-3 rounded-full border border-charcoal/20 px-6 text-base font-semibold text-charcoal transition-colors hover:border-brand hover:text-brand"
-              >
-                <EmailIcon /> {business.email}
-              </a>
-              <a
-                href={business.instagramUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex h-14 items-center gap-3 rounded-full border border-charcoal/20 px-6 text-base font-semibold text-charcoal transition-colors hover:border-brand hover:text-brand"
-              >
-                <InstagramIcon /> {business.instagramHandle}
-              </a>
-            </div>
-          </Reveal>
-        </div>
+        <Reveal delayMs={80}>
+          <div className="mt-10 grid grid-cols-1 gap-3 sm:grid-cols-2">
+            <a
+              href={business.phoneTel}
+              className="flex h-14 items-center justify-center gap-3 rounded-full bg-brand px-6 text-base font-semibold text-cream transition-colors hover:bg-brand-dark"
+            >
+              <PhoneIcon /> Call {business.phoneDisplay}
+            </a>
+            <a
+              href={business.whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex h-14 items-center justify-center gap-3 rounded-full bg-whatsapp px-6 text-base font-semibold text-white transition-colors hover:bg-whatsapp-dark"
+            >
+              <WhatsAppIcon /> WhatsApp Philip
+            </a>
+            <a
+              href={business.emailUrl}
+              className="flex h-14 items-center justify-center gap-3 rounded-full border border-charcoal/20 px-6 text-base font-semibold text-charcoal transition-colors hover:border-brand hover:text-brand"
+            >
+              <EmailIcon /> {business.email}
+            </a>
+            <a
+              href={business.instagramUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex h-14 items-center justify-center gap-3 rounded-full border border-charcoal/20 px-6 text-base font-semibold text-charcoal transition-colors hover:border-brand hover:text-brand"
+            >
+              <InstagramIcon /> {business.instagramHandle}
+            </a>
+          </div>
+        </Reveal>
       </div>
     </section>
   );

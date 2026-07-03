@@ -5,7 +5,7 @@ import Contact from "@/components/Contact";
 
 const title = "Get a Free Quote";
 const description =
-  "Request a free flooring quote from Philip B Flooring — call, WhatsApp, email or send your details for a job in Dublin, Meath or Louth.";
+  "Get a free flooring quote from Philip B Flooring — call, WhatsApp, email or find us on Instagram for a job in Dublin, Meath or Louth.";
 
 export const metadata: Metadata = {
   title,
