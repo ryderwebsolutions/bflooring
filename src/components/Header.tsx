@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { business, nav } from "@/lib/content";
 
@@ -11,11 +12,15 @@ export default function Header() {
     <header className="sticky top-0 z-50 bg-cream/95 backdrop-blur border-b border-taupe/20">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between md:h-20">
-          <Link
-            href="/"
-            className="font-heading text-lg font-bold tracking-tight text-charcoal md:text-xl"
-          >
-            {business.name}
+          <Link href="/" aria-label={`${business.name} — Home`} className="flex items-center">
+            <Image
+              src="/logo-transparent.png"
+              alt={`${business.name} logo`}
+              width={110}
+              height={117}
+              priority
+              className="h-12 w-auto md:h-14"
+            />
           </Link>
 
           <nav className="hidden lg:flex lg:items-center lg:gap-8">
