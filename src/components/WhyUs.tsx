@@ -31,7 +31,7 @@ export default function WhyUs() {
           </Reveal>
 
           <Reveal delayMs={100}>
-            <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl sm:aspect-[5/4]">
+            <div className="relative aspect-[3/2] w-full overflow-hidden rounded-2xl">
               <Image
                 src={whyUsImage.src}
                 alt={whyUsImage.alt}

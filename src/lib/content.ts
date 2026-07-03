@@ -311,8 +311,8 @@ export const heroImage = {
 };
 
 export const whyUsImage = {
-  src: "https://images.unsplash.com/photo-1646592492046-da1c3765f74a?q=80&w=1800&auto=format&fit=crop",
-  alt: "Stock photo of an empty hallway with a wide-plank walnut-toned timber floor, used as a placeholder image",
+  src: "/van.jpg",
+  alt: "Philip B Flooring's branded work van, showing the phone number, email and service area",
 };
 
 export const whyUsPoints = [
