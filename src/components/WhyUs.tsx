@@ -8,7 +8,7 @@ export default function WhyUs() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-16">
           <Reveal>
-            <h2 className="font-heading text-3xl font-semibold tracking-tight text-charcoal sm:text-4xl">
+            <h2 className="font-heading text-3xl font-bold tracking-tight text-charcoal sm:text-4xl">
               The Person Quoting Is the Person Fitting
             </h2>
             <p className="mt-4 max-w-lg text-base text-charcoal/70 sm:text-lg">
@@ -19,7 +19,7 @@ export default function WhyUs() {
             <dl className="mt-8 space-y-6">
               {whyUsPoints.map((point) => (
                 <div key={point.title}>
-                  <dt className="font-heading text-base font-semibold text-charcoal">
+                  <dt className="font-heading text-base font-bold text-charcoal">
                     {point.title}
                   </dt>
                   <dd className="mt-1 text-sm text-charcoal/70">

@@ -20,7 +20,7 @@ export default function Hero() {
         <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-cream/80 sm:text-sm">
           Dublin &middot; Meath &middot; Louth
         </p>
-        <h1 className="max-w-2xl font-heading text-4xl font-semibold leading-[1.1] tracking-tight text-cream sm:text-5xl md:text-6xl">
+        <h1 className="max-w-2xl font-heading text-4xl font-bold leading-[1.1] tracking-tight text-cream sm:text-5xl md:text-6xl">
           Quality Flooring. Expert Finish.
         </h1>
         <p className="mt-5 max-w-lg text-base leading-relaxed text-cream/90 sm:text-lg">

@@ -8,7 +8,7 @@ export default function Contact() {
     <section id="contact" className="bg-cream py-20 sm:py-28">
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         <Reveal>
-          <h2 className="font-heading text-3xl font-semibold tracking-tight text-charcoal sm:text-4xl">
+          <h2 className="font-heading text-3xl font-bold tracking-tight text-charcoal sm:text-4xl">
             Get Your Free Quote
           </h2>
           <p className="mt-4 max-w-lg text-base text-charcoal/70 sm:text-lg">
@@ -24,7 +24,7 @@ export default function Contact() {
 
           <Reveal delayMs={80} className="lg:col-span-2">
             <div className="flex flex-col gap-3 rounded-2xl border border-taupe/20 bg-white/50 p-6">
-              <h3 className="font-heading text-lg font-semibold text-charcoal">
+              <h3 className="font-heading text-lg font-bold text-charcoal">
                 Prefer to skip the form?
               </h3>
               <a

@@ -6,7 +6,7 @@ export default function Services() {
     <section id="services" className="bg-cream py-20 sm:py-28">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <Reveal>
-          <h2 className="max-w-xl font-heading text-3xl font-semibold tracking-tight text-charcoal sm:text-4xl">
+          <h2 className="max-w-xl font-heading text-3xl font-bold tracking-tight text-charcoal sm:text-4xl">
             Flooring Fitted Right, First Time
           </h2>
           <p className="mt-4 max-w-xl text-base text-charcoal/70 sm:text-lg">
@@ -22,7 +22,7 @@ export default function Services() {
                 <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-full bg-oak/10 text-oak">
                   <ServiceIcon icon={service.icon} />
                 </div>
-                <h3 className="font-heading text-lg font-semibold text-charcoal">
+                <h3 className="font-heading text-lg font-bold text-charcoal">
                   {service.title}
                 </h3>
                 <p className="mt-2 text-sm leading-relaxed text-charcoal/70">

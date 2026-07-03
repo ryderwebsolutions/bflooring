@@ -8,8 +8,8 @@ export default function NotFound() {
       <Header />
       <main className="flex flex-1 items-center justify-center px-4 py-24 text-center">
         <div>
-          <p className="font-heading text-6xl font-semibold text-oak">404</p>
-          <h1 className="mt-4 font-heading text-2xl font-semibold text-charcoal sm:text-3xl">
+          <p className="font-heading text-6xl font-bold text-oak">404</p>
+          <h1 className="mt-4 font-heading text-2xl font-bold text-charcoal sm:text-3xl">
             That page has gone missing
           </h1>
           <p className="mt-3 text-base text-charcoal/70">

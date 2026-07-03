@@ -10,7 +10,7 @@ export default function Gallery() {
     <section id="gallery" className="bg-cream py-20 sm:py-28">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <Reveal>
-          <h2 className="max-w-xl font-heading text-3xl font-semibold tracking-tight text-charcoal sm:text-4xl">
+          <h2 className="max-w-xl font-heading text-3xl font-bold tracking-tight text-charcoal sm:text-4xl">
             Our Work
           </h2>
           <p className="mt-4 max-w-xl text-base text-charcoal/70 sm:text-lg">

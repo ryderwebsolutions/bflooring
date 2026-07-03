@@ -9,7 +9,7 @@ export default function Footer() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
           <div>
-            <p className="font-heading text-lg font-semibold text-cream">
+            <p className="font-heading text-lg font-bold text-cream">
               {business.name}
             </p>
             <p className="mt-2 text-sm">{business.tagline}</p>

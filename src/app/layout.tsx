@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
-import { Fraunces, Inter } from "next/font/google";
+import { Archivo, Inter } from "next/font/google";
 import "./globals.css";
 import { business } from "@/lib/content";
 import StickyMobileCta from "@/components/StickyMobileCta";
 
-const fraunces = Fraunces({
-  variable: "--font-fraunces",
+const archivo = Archivo({
+  variable: "--font-archivo",
   subsets: ["latin"],
-  weight: ["500", "600", "700"],
+  weight: ["700", "800", "900"],
   display: "swap",
 });
 
@@ -68,7 +68,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${fraunces.variable} ${inter.variable} h-full antialiased`}
+      className={`${archivo.variable} ${inter.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col font-sans bg-cream text-charcoal">
         <script

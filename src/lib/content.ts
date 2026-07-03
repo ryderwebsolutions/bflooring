@@ -98,91 +98,93 @@ export type GalleryItem = {
   beforeAlt?: string;
 };
 
-// Stock interior photography used as placeholders until Philip supplies real project photos.
-// Each entry is a single named slot (image/alt/description) — swap the `image` and `alt`
-// fields for a real project photo and this component needs no other changes.
-// Source: Unsplash (royalty-free, licensed for commercial use).
+// Stock photography used as placeholders until Philip supplies real project photos.
+// Deliberately unstaged, empty-room shots (no styled furniture/props) so the
+// gallery reads as "finished floor" documentation rather than a lifestyle
+// catalogue. Each entry is a single named slot (image/alt/description) — swap
+// the `image` and `alt` fields for a real project photo and this component
+// needs no other changes. Source: Unsplash (royalty-free, commercial use).
 export const galleryItems: GalleryItem[] = [
   {
     id: "gallery-1",
-    title: "[STOCK PHOTO — replace with real project] Living room timber floor",
+    title: "[STOCK PHOTO — replace with real project] Parquet floor, bedroom",
     category: "Timber Flooring",
     image:
-      "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=1800&auto=format&fit=crop",
-    alt: "Stock photo of a bright living room with wide-plank timber flooring, used as a placeholder for a real Philip B Flooring project",
+      "https://images.unsplash.com/photo-1722650363568-9f250806ec58?q=80&w=1800&auto=format&fit=crop",
+    alt: "Stock photo of an empty bedroom with a checkerboard parquet timber floor, used as a placeholder for a real Philip B Flooring project",
     description: "Example of the timber flooring look and finish we fit.",
   },
   {
     id: "gallery-2",
-    title: "[STOCK PHOTO — replace with real project] Herringbone timber floor",
+    title: "[STOCK PHOTO — replace with real project] Open-plan floor with staircase",
     category: "Timber Flooring",
     image:
-      "https://images.unsplash.com/photo-1493809842364-78817add7ffb?q=80&w=1800&auto=format&fit=crop",
-    alt: "Stock photo of a living room with a herringbone pattern timber floor, used as a placeholder for a real Philip B Flooring project",
-    description: "Herringbone-style timber laid room to room.",
+      "https://images.unsplash.com/photo-1646592491741-e79ae5953486?q=80&w=1800&auto=format&fit=crop",
+    alt: "Stock photo of an empty open-plan room with an engineered wood floor and staircase, used as a placeholder for a real Philip B Flooring project",
+    description: "One continuous timber floor run through an open-plan space.",
   },
   {
     id: "gallery-3",
-    title: "[STOCK PHOTO — replace with real project] Laminate flooring, bright interior",
+    title: "[STOCK PHOTO — replace with real project] Laminate flooring, bedroom",
     category: "Laminate Flooring",
     image:
-      "https://images.unsplash.com/photo-1519710164239-da123dc03ef4?q=80&w=1800&auto=format&fit=crop",
-    alt: "Stock photo of a bright room with light laminate flooring, used as a placeholder for a real Philip B Flooring project",
+      "https://images.unsplash.com/photo-1722650273431-9aefddd19151?q=80&w=1800&auto=format&fit=crop",
+    alt: "Stock photo of an empty bedroom with light laminate flooring, used as a placeholder for a real Philip B Flooring project",
     description: "Light laminate fitted for a bright, low-maintenance finish.",
   },
   {
     id: "gallery-4",
-    title: "[STOCK PHOTO — replace with real project] Vinyl flooring, bathroom",
-    category: "Vinyl Flooring",
+    title: "[STOCK PHOTO — replace with real project] Laminate flooring, bedroom with door",
+    category: "Laminate Flooring",
     image:
-      "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=1800&auto=format&fit=crop",
-    alt: "Stock photo of a bathroom with water-resistant vinyl flooring, used as a placeholder for a real Philip B Flooring project",
-    description: "Water-resistant vinyl fitted for a busy family bathroom.",
+      "https://images.unsplash.com/photo-1721901948510-e69c0eb88156?q=80&w=1800&auto=format&fit=crop",
+    alt: "Stock photo of an empty bedroom with light laminate flooring and a single door, used as a placeholder for a real Philip B Flooring project",
+    description: "Laminate fitted tight and level, room to room.",
   },
   {
     id: "gallery-5",
-    title: "[STOCK PHOTO — replace with real project] Commercial floor, office space",
-    category: "Domestic & Commercial",
+    title: "[STOCK PHOTO — replace with real project] Tiled-effect flooring",
+    category: "Vinyl Flooring",
     image:
-      "https://images.unsplash.com/photo-1524758631624-e2822e304c36?q=80&w=1800&auto=format&fit=crop",
-    alt: "Stock photo of a commercial office space with patterned flooring, used as a placeholder for a real Philip B Flooring project",
-    description: "Commercial premises fitted to the same standard as a home.",
+      "https://images.unsplash.com/photo-1722348675233-e3af1abd4023?q=80&w=1800&auto=format&fit=crop",
+    alt: "Stock photo of a small empty room with a grey tiled-effect floor, used as a placeholder for a real Philip B Flooring vinyl project",
+    description: "The kind of clean, water-resistant finish vinyl gives a busy room.",
   },
   {
     id: "gallery-6",
-    title: "[STOCK PHOTO — replace with real project] Floor preparation & refinishing",
-    category: "Repairs & Finishing",
+    title: "[STOCK PHOTO — replace with real project] Hallway floor, transition detail",
+    category: "Floor Preparation",
     image:
-      "https://images.unsplash.com/photo-1594026112284-02bb6f3352fe?q=80&w=1800&auto=format&fit=crop",
-    alt: "Stock photo of a light oak floor in a living space, used as a placeholder for a real Philip B Flooring project",
-    description: "Existing floors levelled, repaired and refinished.",
+      "https://images.unsplash.com/photo-1727872496300-57e476478a54?q=80&w=1800&auto=format&fit=crop",
+    alt: "Stock photo of an empty hallway with a light timber floor leading into a bright room, used as a placeholder for a real Philip B Flooring project",
+    description: "Subfloors levelled and prepped before a board goes down.",
   },
   {
     id: "gallery-7",
-    title: "[STOCK PHOTO — replace with real project] Timber floor, bedroom",
-    category: "Timber Flooring",
+    title: "[STOCK PHOTO — replace with real project] Entrance hall floor",
+    category: "Repairs & Finishing",
     image:
-      "https://images.unsplash.com/photo-1595526051245-4506e0005bd0?q=80&w=1800&auto=format&fit=crop",
-    alt: "Stock photo of a bedroom with light timber flooring, used as a placeholder for a real Philip B Flooring project",
-    description: "Timber flooring fitted through a bedroom.",
+      "https://images.unsplash.com/photo-1722603929404-b29f53884a35?q=80&w=1800&auto=format&fit=crop",
+    alt: "Stock photo of an empty entrance hallway with a honey-toned timber floor, used as a placeholder for a real Philip B Flooring project",
+    description: "Worn entrance floors repaired and refinished.",
   },
   {
     id: "gallery-8",
-    title: "[STOCK PHOTO — replace with real project] Open-plan kitchen & living floor",
+    title: "[STOCK PHOTO — replace with real project] Bedroom floor, built-in wardrobe",
     category: "Domestic & Commercial",
     image:
-      "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&w=1800&auto=format&fit=crop",
-    alt: "Stock photo of an open-plan kitchen and living area with timber flooring, used as a placeholder for a real Philip B Flooring project",
-    description: "One continuous floor run through an open-plan space.",
+      "https://images.unsplash.com/photo-1722650363577-b1f6e1c191e3?q=80&w=1800&auto=format&fit=crop",
+    alt: "Stock photo of an empty room with a built-in wardrobe and honey-toned timber floor, used as a placeholder for a real Philip B Flooring project",
+    description: "Homes and business premises fitted to the same standard.",
   },
   {
     id: "gallery-9",
-    title: "[STOCK PHOTO — replace with real project] Apartment timber floor",
-    category: "Timber Flooring",
+    title: "[STOCK PHOTO — replace with real project] Apartment floor, closet nook",
+    category: "Domestic & Commercial",
     image:
-      "https://images.unsplash.com/photo-1449247613801-ab06418e2861?q=80&w=1800&auto=format&fit=crop",
-    alt: "Stock photo of an apartment living space with timber flooring, used as a placeholder for a real Philip B Flooring project",
-    description: "Timber flooring fitted in an apartment living space.",
+      "https://images.unsplash.com/photo-1721901950690-90d2df5385bd?q=80&w=1800&auto=format&fit=crop",
+    alt: "Stock photo of an empty apartment room with a closet nook and light timber floor, used as a placeholder for a real Philip B Flooring project",
+    description: "Fitted to the same finish whether it's a home or a unit.",
   },
 ];
 
@@ -246,13 +248,13 @@ export const trustBadges = [
 ];
 
 export const heroImage = {
-  src: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=2400&auto=format&fit=crop",
-  alt: "Stock photo of a bright, high-ceilinged living room with warm wide-plank timber flooring, used as a placeholder hero image",
+  src: "https://images.unsplash.com/photo-1722650362348-ef3034f6b864?q=80&w=2400&auto=format&fit=crop",
+  alt: "Stock photo of a bright, empty room with a warm parquet timber floor, used as a placeholder hero image",
 };
 
 export const whyUsImage = {
-  src: "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?q=80&w=1800&auto=format&fit=crop",
-  alt: "Stock photo of a bright living room with timber flooring and houseplants, used as a placeholder image",
+  src: "https://images.unsplash.com/photo-1646592492046-da1c3765f74a?q=80&w=1800&auto=format&fit=crop",
+  alt: "Stock photo of an empty hallway with a wide-plank walnut-toned timber floor, used as a placeholder image",
 };
 
 export const whyUsPoints = [

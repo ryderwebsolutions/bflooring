@@ -21,7 +21,7 @@ export default function OurWorkPage() {
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-oak">
               Our Work
             </p>
-            <h1 className="mt-3 max-w-2xl font-heading text-4xl font-semibold tracking-tight text-charcoal sm:text-5xl">
+            <h1 className="mt-3 max-w-2xl font-heading text-4xl font-bold tracking-tight text-charcoal sm:text-5xl">
               Flooring Projects Across Dublin, Meath &amp; Louth
             </h1>
             <p className="mt-4 max-w-xl text-base text-charcoal/70 sm:text-lg">

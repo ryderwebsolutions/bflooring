@@ -13,7 +13,7 @@ export default function Header() {
         <div className="flex h-16 items-center justify-between md:h-20">
           <Link
             href="/"
-            className="font-heading text-lg font-semibold tracking-tight text-charcoal md:text-xl"
+            className="font-heading text-lg font-bold tracking-tight text-charcoal md:text-xl"
           >
             {business.name}
           </Link>

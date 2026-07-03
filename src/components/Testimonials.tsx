@@ -13,7 +13,7 @@ export default function Testimonials() {
       <section className="bg-cream py-16 sm:py-20">
         <div className="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
           <Reveal>
-            <p className="font-heading text-xl font-semibold text-charcoal sm:text-2xl">
+            <p className="font-heading text-xl font-bold text-charcoal sm:text-2xl">
               Reviews coming soon
             </p>
             <p className="mt-3 text-sm text-charcoal/60 sm:text-base">

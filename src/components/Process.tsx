@@ -6,7 +6,7 @@ export default function Process() {
     <section id="process" className="bg-charcoal py-20 text-cream sm:py-28">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <Reveal>
-          <h2 className="max-w-xl font-heading text-3xl font-semibold tracking-tight sm:text-4xl">
+          <h2 className="max-w-xl font-heading text-3xl font-bold tracking-tight sm:text-4xl">
             From Quote to Finished Floor
           </h2>
         </Reveal>
@@ -15,11 +15,11 @@ export default function Process() {
           {processSteps.map((step, i) => (
             <Reveal key={step.step} delayMs={i * 70}>
               <div className="flex items-start gap-4 lg:flex-col lg:items-start lg:gap-3">
-                <span className="font-heading text-3xl font-semibold text-oak">
+                <span className="font-heading text-3xl font-bold text-oak">
                   {String(step.step).padStart(2, "0")}
                 </span>
                 <div>
-                  <h3 className="font-heading text-lg font-semibold">{step.title}</h3>
+                  <h3 className="font-heading text-lg font-bold">{step.title}</h3>
                   <p className="mt-1 text-sm text-cream/70">{step.description}</p>
                 </div>
               </div>
