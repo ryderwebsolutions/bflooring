@@ -39,36 +39,6 @@ export default function ServiceAreas() {
               referrerPolicy="no-referrer-when-downgrade"
             />
 
-            {/* Approximate service-area highlight over Dublin, Meath & Louth.
-                Decorative only — not a precise county boundary trace, since
-                that needs the paid Maps JS API with GeoJSON boundary data.
-                The map itself is real; this overlay just can't be panned or
-                zoomed, so "Open in Google Maps" below covers that. */}
-            <svg
-              className="pointer-events-none absolute inset-0 h-full w-full"
-              viewBox="0 0 400 300"
-              preserveAspectRatio="none"
-              aria-hidden="true"
-            >
-              <path
-                d="M 205 60
-                   C 175 55, 150 70, 145 100
-                   C 140 125, 150 145, 148 170
-                   C 146 195, 165 215, 195 225
-                   C 220 233, 245 225, 258 205
-                   C 270 187, 262 170, 268 150
-                   C 274 128, 268 105, 250 88
-                   C 235 73, 222 63, 205 60 Z"
-                fill="var(--color-brand)"
-                fillOpacity="0.16"
-                stroke="var(--color-brand)"
-                strokeOpacity="0.7"
-                strokeWidth="2"
-                strokeLinejoin="round"
-                strokeDasharray="6 5"
-              />
-            </svg>
-
             <a
               href={MAP_LINK_URL}
               target="_blank"
