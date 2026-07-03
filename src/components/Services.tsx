@@ -19,7 +19,7 @@ export default function Services() {
           {services.map((service, i) => (
             <Reveal key={service.id} delayMs={(i % 3) * 60}>
               <div className="flex h-full flex-col rounded-2xl border border-taupe/20 bg-white/50 p-6">
-                <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-full bg-oak/10 text-oak">
+                <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-full bg-brand/10 text-brand">
                   <ServiceIcon icon={service.icon} />
                 </div>
                 <h3 className="font-heading text-lg font-bold text-charcoal">

@@ -43,8 +43,8 @@ export default function GalleryGrid({
               onClick={() => setCategory(cat)}
               className={`min-h-[44px] rounded-full border px-4 text-sm font-medium transition-colors ${
                 category === cat
-                  ? "border-oak bg-oak text-cream"
-                  : "border-taupe/30 bg-transparent text-charcoal/70 hover:border-oak"
+                  ? "border-brand bg-brand text-cream"
+                  : "border-taupe/30 bg-transparent text-charcoal/70 hover:border-brand"
               }`}
             >
               {cat}
@@ -59,7 +59,7 @@ export default function GalleryGrid({
             key={item.id}
             type="button"
             onClick={() => setActiveIndex(index)}
-            className="group relative aspect-square overflow-hidden rounded-xl bg-taupe/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-oak"
+            className="group relative aspect-square overflow-hidden rounded-xl bg-taupe/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
             aria-label={`View larger photo: ${item.alt}`}
           >
             <Image

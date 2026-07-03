@@ -15,7 +15,7 @@ export default function Process() {
           {processSteps.map((step, i) => (
             <Reveal key={step.step} delayMs={i * 70}>
               <div className="flex items-start gap-4 lg:flex-col lg:items-start lg:gap-3">
-                <span className="font-heading text-3xl font-bold text-oak">
+                <span className="font-heading text-3xl font-bold text-brand">
                   {String(step.step).padStart(2, "0")}
                 </span>
                 <div>

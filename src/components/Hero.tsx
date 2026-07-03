@@ -31,7 +31,7 @@ export default function Hero() {
         <div className="mt-8 flex flex-col gap-3 sm:flex-row">
           <Link
             href="/#contact"
-            className="flex h-14 items-center justify-center rounded-full bg-oak px-8 text-base font-semibold text-cream transition-colors hover:bg-oak-dark"
+            className="flex h-14 items-center justify-center rounded-full bg-brand px-8 text-base font-semibold text-cream transition-colors hover:bg-brand-dark"
           >
             Get a Free Quote
           </Link>

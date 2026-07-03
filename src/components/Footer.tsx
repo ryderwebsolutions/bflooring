@@ -21,12 +21,12 @@ export default function Footer() {
             </h3>
             <ul className="mt-3 space-y-2 text-sm">
               <li>
-                <a href={business.phoneTel} className="hover:text-oak">
+                <a href={business.phoneTel} className="hover:text-brand">
                   {business.phoneDisplay}
                 </a>
               </li>
               <li>
-                <a href={business.emailUrl} className="hover:text-oak">
+                <a href={business.emailUrl} className="hover:text-brand">
                   {business.email}
                 </a>
               </li>
@@ -35,7 +35,7 @@ export default function Footer() {
                   href={business.instagramUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-oak"
+                  className="hover:text-brand"
                 >
                   {business.instagramHandle}
                 </a>
@@ -50,7 +50,7 @@ export default function Footer() {
             <ul className="mt-3 space-y-2 text-sm">
               {services.slice(0, 5).map((service) => (
                 <li key={service.id}>
-                  <Link href="/#services" className="hover:text-oak">
+                  <Link href="/#services" className="hover:text-brand">
                     {service.title}
                   </Link>
                 </li>
@@ -64,17 +64,17 @@ export default function Footer() {
             </h3>
             <ul className="mt-3 space-y-2 text-sm">
               <li>
-                <Link href="/" className="hover:text-oak">
+                <Link href="/" className="hover:text-brand">
                   Home
                 </Link>
               </li>
               <li>
-                <Link href="/our-work" className="hover:text-oak">
+                <Link href="/our-work" className="hover:text-brand">
                   Our Work
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="hover:text-oak">
+                <Link href="/contact" className="hover:text-brand">
                   Contact
                 </Link>
               </li>

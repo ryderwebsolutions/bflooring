@@ -34,7 +34,7 @@ export default function Testimonials() {
             <Reveal key={t.id}>
               <figure className="h-full rounded-2xl border border-taupe/20 bg-white/50 p-6">
                 {t.rating && (
-                  <div className="mb-3 text-oak" aria-label={`${t.rating} out of 5 stars`}>
+                  <div className="mb-3 text-brand" aria-label={`${t.rating} out of 5 stars`}>
                     {"★".repeat(t.rating)}
                     {"☆".repeat(5 - t.rating)}
                   </div>

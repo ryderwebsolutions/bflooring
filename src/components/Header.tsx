@@ -28,7 +28,7 @@ export default function Header() {
               <a
                 key={item.href}
                 href={item.href}
-                className="text-sm font-medium text-charcoal/80 transition-colors hover:text-oak"
+                className="text-sm font-medium text-charcoal/80 transition-colors hover:text-brand"
               >
                 {item.label}
               </a>
@@ -38,13 +38,13 @@ export default function Header() {
           <div className="hidden lg:flex lg:items-center lg:gap-5">
             <a
               href={business.phoneTel}
-              className="text-sm font-medium text-charcoal/80 transition-colors hover:text-oak"
+              className="text-sm font-medium text-charcoal/80 transition-colors hover:text-brand"
             >
               {business.phoneDisplay}
             </a>
             <Link
               href="/#contact"
-              className="inline-flex h-11 items-center justify-center rounded-full bg-oak px-6 text-sm font-semibold text-cream transition-colors hover:bg-oak-dark"
+              className="inline-flex h-11 items-center justify-center rounded-full bg-brand px-6 text-sm font-semibold text-cream transition-colors hover:bg-brand-dark"
             >
               Get a Free Quote
             </Link>
@@ -54,7 +54,7 @@ export default function Header() {
             <a
               href={business.phoneTel}
               aria-label={`Call Philip B Flooring on ${business.phoneDisplay}`}
-              className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-oak text-cream"
+              className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-brand text-cream"
             >
               <PhoneIcon />
             </a>
@@ -88,7 +88,7 @@ export default function Header() {
           <div className="flex flex-col gap-3 px-6 pb-8">
             <a
               href={business.phoneTel}
-              className="flex h-14 items-center justify-center gap-2 rounded-full bg-oak text-base font-semibold text-cream"
+              className="flex h-14 items-center justify-center gap-2 rounded-full bg-brand text-base font-semibold text-cream"
             >
               <PhoneIcon /> Call Philip
             </a>

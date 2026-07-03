@@ -2,10 +2,10 @@
 
 :root {
   --color-cream: #faf7f2;
-  --color-charcoal: #1c1a17;
-  --color-oak: #b4813f;
-  --color-oak-dark: #96692f;
-  --color-taupe: #8a8377;
+  --color-charcoal: #242424;
+  --color-brand: #e20404;
+  --color-brand-dark: #ac0303;
+  --color-taupe: #847f7c;
   --color-whatsapp: #25d366;
   --color-whatsapp-dark: #1ebe57;
 }
@@ -13,8 +13,8 @@
 @theme inline {
   --color-cream: var(--color-cream);
   --color-charcoal: var(--color-charcoal);
-  --color-oak: var(--color-oak);
-  --color-oak-dark: var(--color-oak-dark);
+  --color-brand: var(--color-brand);
+  --color-brand-dark: var(--color-brand-dark);
   --color-taupe: var(--color-taupe);
   --color-whatsapp: var(--color-whatsapp);
   --color-whatsapp-dark: var(--color-whatsapp-dark);

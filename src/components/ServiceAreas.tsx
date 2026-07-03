@@ -17,7 +17,7 @@ export default function ServiceAreas() {
             {business.areas.map((area) => (
               <span
                 key={area}
-                className="rounded-full border border-oak/40 bg-oak/10 px-6 py-2 text-sm font-semibold text-oak-dark"
+                className="rounded-full border border-brand/40 bg-brand/10 px-6 py-2 text-sm font-semibold text-brand-dark"
               >
                 {area}
               </span>

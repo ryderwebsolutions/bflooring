@@ -23,7 +23,7 @@ export default function StickyMobileCta() {
     >
       <a
         href={business.phoneTel}
-        className="flex h-14 flex-1 items-center justify-center gap-2 bg-oak text-sm font-semibold text-cream"
+        className="flex h-14 flex-1 items-center justify-center gap-2 bg-brand text-sm font-semibold text-cream"
         tabIndex={visible ? 0 : -1}
       >
         <PhoneIcon /> Call Philip

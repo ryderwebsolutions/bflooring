@@ -29,7 +29,7 @@ export default function Contact() {
               </h3>
               <a
                 href={business.phoneTel}
-                className="flex h-14 items-center gap-3 rounded-full bg-oak px-6 text-base font-semibold text-cream transition-colors hover:bg-oak-dark"
+                className="flex h-14 items-center gap-3 rounded-full bg-brand px-6 text-base font-semibold text-cream transition-colors hover:bg-brand-dark"
               >
                 <PhoneIcon /> Call {business.phoneDisplay}
               </a>
@@ -43,7 +43,7 @@ export default function Contact() {
               </a>
               <a
                 href={business.emailUrl}
-                className="flex h-14 items-center gap-3 rounded-full border border-charcoal/20 px-6 text-base font-semibold text-charcoal transition-colors hover:border-oak hover:text-oak"
+                className="flex h-14 items-center gap-3 rounded-full border border-charcoal/20 px-6 text-base font-semibold text-charcoal transition-colors hover:border-brand hover:text-brand"
               >
                 <EmailIcon /> {business.email}
               </a>
@@ -51,7 +51,7 @@ export default function Contact() {
                 href={business.instagramUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex h-14 items-center gap-3 rounded-full border border-charcoal/20 px-6 text-base font-semibold text-charcoal transition-colors hover:border-oak hover:text-oak"
+                className="flex h-14 items-center gap-3 rounded-full border border-charcoal/20 px-6 text-base font-semibold text-charcoal transition-colors hover:border-brand hover:text-brand"
               >
                 <InstagramIcon /> {business.instagramHandle}
               </a>

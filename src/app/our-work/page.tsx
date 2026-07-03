@@ -18,7 +18,7 @@ export default function OurWorkPage() {
       <main className="flex-1">
         <section className="py-16 sm:py-24">
           <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-oak">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand">
               Our Work
             </p>
             <h1 className="mt-3 max-w-2xl font-heading text-4xl font-bold tracking-tight text-charcoal sm:text-5xl">
@@ -31,7 +31,7 @@ export default function OurWorkPage() {
                 href={business.instagramUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-medium text-oak hover:underline"
+                className="font-medium text-brand hover:underline"
               >
                 {business.instagramHandle}
               </a>{" "}
@@ -45,7 +45,7 @@ export default function OurWorkPage() {
             <div className="mt-12">
               <Link
                 href="/#contact"
-                className="flex h-14 w-full items-center justify-center rounded-full bg-oak text-base font-semibold text-cream transition-colors hover:bg-oak-dark sm:w-auto sm:px-10"
+                className="flex h-14 w-full items-center justify-center rounded-full bg-brand text-base font-semibold text-cream transition-colors hover:bg-brand-dark sm:w-auto sm:px-10"
               >
                 Get a Free Quote
               </Link>

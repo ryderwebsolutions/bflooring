@@ -26,7 +26,7 @@ export default function Gallery() {
         <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-between">
           <Link
             href="/our-work"
-            className="flex h-12 items-center justify-center rounded-full border border-charcoal/20 px-6 text-sm font-semibold text-charcoal transition-colors hover:border-oak hover:text-oak"
+            className="flex h-12 items-center justify-center rounded-full border border-charcoal/20 px-6 text-sm font-semibold text-charcoal transition-colors hover:border-brand hover:text-brand"
           >
             See Full Gallery
           </Link>

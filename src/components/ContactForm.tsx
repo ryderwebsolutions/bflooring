@@ -82,7 +82,7 @@ export default function ContactForm() {
           onChange={(e) => updateField("name", e.target.value)}
           aria-invalid={Boolean(errors.name)}
           aria-describedby={errors.name ? "name-error" : undefined}
-          className="h-12 w-full rounded-lg border border-taupe/30 bg-white px-4 text-base text-charcoal focus:border-oak focus:outline-none focus:ring-2 focus:ring-oak/30"
+          className="h-12 w-full rounded-lg border border-taupe/30 bg-white px-4 text-base text-charcoal focus:border-brand focus:outline-none focus:ring-2 focus:ring-brand/30"
         />
         {errors.name && (
           <p id="name-error" className="mt-1 text-sm text-red-700">
@@ -104,7 +104,7 @@ export default function ContactForm() {
             onChange={(e) => updateField("phone", e.target.value)}
             aria-invalid={Boolean(errors.phone)}
             aria-describedby={errors.phone ? "phone-error" : undefined}
-            className="h-12 w-full rounded-lg border border-taupe/30 bg-white px-4 text-base text-charcoal focus:border-oak focus:outline-none focus:ring-2 focus:ring-oak/30"
+            className="h-12 w-full rounded-lg border border-taupe/30 bg-white px-4 text-base text-charcoal focus:border-brand focus:outline-none focus:ring-2 focus:ring-brand/30"
           />
           {errors.phone && (
             <p id="phone-error" className="mt-1 text-sm text-red-700">
@@ -125,7 +125,7 @@ export default function ContactForm() {
             onChange={(e) => updateField("email", e.target.value)}
             aria-invalid={Boolean(errors.email)}
             aria-describedby={errors.email ? "email-error" : undefined}
-            className="h-12 w-full rounded-lg border border-taupe/30 bg-white px-4 text-base text-charcoal focus:border-oak focus:outline-none focus:ring-2 focus:ring-oak/30"
+            className="h-12 w-full rounded-lg border border-taupe/30 bg-white px-4 text-base text-charcoal focus:border-brand focus:outline-none focus:ring-2 focus:ring-brand/30"
           />
           {errors.email && (
             <p id="email-error" className="mt-1 text-sm text-red-700">
@@ -145,7 +145,7 @@ export default function ContactForm() {
             type="text"
             value={form.area}
             onChange={(e) => updateField("area", e.target.value)}
-            className="h-12 w-full rounded-lg border border-taupe/30 bg-white px-4 text-base text-charcoal focus:border-oak focus:outline-none focus:ring-2 focus:ring-oak/30"
+            className="h-12 w-full rounded-lg border border-taupe/30 bg-white px-4 text-base text-charcoal focus:border-brand focus:outline-none focus:ring-2 focus:ring-brand/30"
           />
         </div>
 
@@ -157,7 +157,7 @@ export default function ContactForm() {
             id="flooringType"
             value={form.flooringType}
             onChange={(e) => updateField("flooringType", e.target.value)}
-            className="h-12 w-full rounded-lg border border-taupe/30 bg-white px-4 text-base text-charcoal focus:border-oak focus:outline-none focus:ring-2 focus:ring-oak/30"
+            className="h-12 w-full rounded-lg border border-taupe/30 bg-white px-4 text-base text-charcoal focus:border-brand focus:outline-none focus:ring-2 focus:ring-brand/30"
           >
             <option value="">Not sure yet</option>
             {services.map((service) => (
@@ -181,7 +181,7 @@ export default function ContactForm() {
           aria-invalid={Boolean(errors.message)}
           aria-describedby={errors.message ? "message-error" : undefined}
           placeholder="Tell Philip about the room, the flooring you have in mind, and roughly when you'd like it done."
-          className="w-full rounded-lg border border-taupe/30 bg-white px-4 py-3 text-base text-charcoal focus:border-oak focus:outline-none focus:ring-2 focus:ring-oak/30"
+          className="w-full rounded-lg border border-taupe/30 bg-white px-4 py-3 text-base text-charcoal focus:border-brand focus:outline-none focus:ring-2 focus:ring-brand/30"
         />
         {errors.message && (
           <p id="message-error" className="mt-1 text-sm text-red-700">
@@ -207,7 +207,7 @@ export default function ContactForm() {
 
       <button
         type="submit"
-        className="flex h-14 w-full items-center justify-center rounded-full bg-oak text-base font-semibold text-cream transition-colors hover:bg-oak-dark sm:w-auto sm:px-10"
+        className="flex h-14 w-full items-center justify-center rounded-full bg-brand text-base font-semibold text-cream transition-colors hover:bg-brand-dark sm:w-auto sm:px-10"
       >
         Get a Free Quote
       </button>
