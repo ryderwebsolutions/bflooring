@@ -14,8 +14,8 @@ export default function Gallery() {
             Our Work
           </h2>
           <p className="mt-4 max-w-xl text-base text-charcoal/70 sm:text-lg">
-            A look at the kind of finish we aim for. Real project photos will
-            replace these as jobs are completed.
+            Real jobs fitted by Philip B Flooring across Dublin, Meath and
+            Louth.
           </p>
         </Reveal>
 

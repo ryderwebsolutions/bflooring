@@ -37,18 +37,19 @@ export type Service = {
   alt: string;
 };
 
-// Each service links to a stock placeholder photo (see the note above
-// galleryItems) so the services list can show a real floor instead of a
-// generic icon. Swap `image`/`alt` for real project photos when available.
+// Most services now link to a real Philip B Flooring job photo, organised in
+// /public/images/gallery. Timber and Floor Preparation still use a stock
+// Unsplash placeholder (clearly noted below) because no real photo of that
+// work exists yet — swap `image`/`alt` for a real project photo once Philip
+// supplies one.
 export const services: Service[] = [
   {
     id: "supply-fitting",
     title: "Flooring Supply & Fitting",
     description:
       "Supply and fitting handled as one job, so what you're quoted is what gets fitted.",
-    image:
-      "https://images.unsplash.com/photo-1646592491741-e79ae5953486?q=80&w=1600&auto=format&fit=crop",
-    alt: "Stock photo of an empty open-plan room with a timber floor and staircase, used as a placeholder image",
+    image: "/images/gallery/laminate-living-room-garden.jpg",
+    alt: "Bright open-plan room with laminate flooring fitted by Philip B Flooring, garden visible through patio doors",
   },
   {
     id: "timber",
@@ -57,25 +58,31 @@ export const services: Service[] = [
       "Solid and engineered timber floors fitted with an eye for grain, joins and finish.",
     image:
       "https://images.unsplash.com/photo-1722650363568-9f250806ec58?q=80&w=1600&auto=format&fit=crop",
-    alt: "Stock photo of an empty bedroom with a checkerboard parquet timber floor, used as a placeholder image",
+    alt: "[STOCK PHOTO — replace with real project] Empty bedroom with a checkerboard parquet timber floor, used as a placeholder image",
   },
   {
     id: "laminate",
     title: "Laminate Flooring",
     description:
       "Durable, low-maintenance laminate fitted tight and level, room to room.",
-    image:
-      "https://images.unsplash.com/photo-1722650273431-9aefddd19151?q=80&w=1600&auto=format&fit=crop",
-    alt: "Stock photo of an empty bedroom with light laminate flooring, used as a placeholder image",
+    image: "/images/gallery/laminate-herringbone-hallway.jpg",
+    alt: "Herringbone-pattern laminate flooring fitted through a hallway by Philip B Flooring",
+  },
+  {
+    id: "carpet",
+    title: "Carpet Flooring",
+    description:
+      "Carpet fitted and bordered clean on stairs, landings and bedrooms.",
+    image: "/images/gallery/carpet-curved-staircase-herringbone.jpg",
+    alt: "Herringbone-weave carpet with black border trim fitted on a curved staircase by Philip B Flooring",
   },
   {
     id: "vinyl",
     title: "Vinyl Flooring",
     description:
       "Water-resistant vinyl fitted for kitchens, bathrooms and busy family rooms.",
-    image:
-      "https://images.unsplash.com/photo-1722348675233-e3af1abd4023?q=80&w=1600&auto=format&fit=crop",
-    alt: "Stock photo of a small empty room with a grey tiled-effect floor, used as a placeholder image",
+    image: "/images/gallery/vinyl-commercial-walkway.jpg",
+    alt: "Wood-effect commercial vinyl flooring fitted by Philip B Flooring",
   },
   {
     id: "prep",
@@ -84,7 +91,7 @@ export const services: Service[] = [
       "Subfloors levelled and prepped properly before a single board goes down.",
     image:
       "https://images.unsplash.com/photo-1727872496300-57e476478a54?q=80&w=1600&auto=format&fit=crop",
-    alt: "Stock photo of an empty hallway leading into a bright room with a timber floor, used as a placeholder image",
+    alt: "[STOCK PHOTO — replace with real project] Empty hallway leading into a bright room with a timber floor, used as a placeholder image",
   },
   {
     id: "repairs",
@@ -93,16 +100,15 @@ export const services: Service[] = [
       "Damaged boards, worn finishes and uneven patches repaired and refinished.",
     image:
       "https://images.unsplash.com/photo-1722603929404-b29f53884a35?q=80&w=1600&auto=format&fit=crop",
-    alt: "Stock photo of an empty entrance hallway with a honey-toned timber floor, used as a placeholder image",
+    alt: "[STOCK PHOTO — replace with real project] Empty entrance hallway with a honey-toned timber floor, used as a placeholder image",
   },
   {
     id: "commercial",
     title: "Domestic & Commercial Flooring",
     description:
       "Homes and business premises both fitted to the same professional standard.",
-    image:
-      "https://images.unsplash.com/photo-1722650363577-b1f6e1c191e3?q=80&w=1600&auto=format&fit=crop",
-    alt: "Stock photo of an empty room with a built-in wardrobe and honey-toned timber floor, used as a placeholder image",
+    image: "/images/gallery/vinyl-commercial-counter.jpg",
+    alt: "Commercial vinyl flooring fitted in a betting shop reception by Philip B Flooring",
   },
 ];
 
@@ -117,15 +123,182 @@ export type GalleryItem = {
   beforeAlt?: string;
 };
 
-// Stock photography used as placeholders until Philip supplies real project photos.
-// Deliberately unstaged, empty-room shots (no styled furniture/props) so the
-// gallery reads as "finished floor" documentation rather than a lifestyle
-// catalogue. Each entry is a single named slot (image/alt/description) — swap
-// the `image` and `alt` fields for a real project photo and this component
-// needs no other changes. Source: Unsplash (royalty-free, commercial use).
+// Real Philip B Flooring job photos, organised in /public/images/gallery.
+// Timber Flooring and Floor Preparation still carry a single stock Unsplash
+// placeholder each (clearly flagged in the title/alt) because no real photo
+// of that work exists yet — replace with a real project photo as soon as one
+// is available, no other changes needed.
 export const galleryItems: GalleryItem[] = [
   {
-    id: "gallery-1",
+    id: "gallery-carpet-1",
+    title: "Herringbone carpet, curved staircase",
+    category: "Carpet Flooring",
+    image: "/images/gallery/carpet-curved-staircase-herringbone.jpg",
+    alt: "Herringbone-weave carpet with black border trim fitted on a curved staircase",
+    description: "Carpet cut and bordered clean around a curved staircase.",
+  },
+  {
+    id: "gallery-laminate-1",
+    title: "Herringbone laminate, hallway",
+    category: "Laminate Flooring",
+    image: "/images/gallery/laminate-herringbone-hallway.jpg",
+    alt: "Herringbone-pattern laminate flooring fitted through a hallway",
+    description: "A herringbone lay fitted through a hallway, door to door.",
+  },
+  {
+    id: "gallery-vinyl-1",
+    title: "Commercial vinyl walkway, betting shop",
+    category: "Vinyl Flooring",
+    image: "/images/gallery/vinyl-commercial-walkway.jpg",
+    alt: "Wood-effect commercial vinyl flooring fitted as a walkway in a betting shop",
+    description: "A commercial vinyl walkway fitted for a busy betting shop floor.",
+  },
+  {
+    id: "gallery-carpet-2",
+    title: "Carpet runner, black border trim",
+    category: "Carpet Flooring",
+    image: "/images/gallery/carpet-black-border-runner.jpg",
+    alt: "Grey carpet runner with black border trim fitted on a staircase",
+    description: "A neat runner fit with contrast border trim.",
+  },
+  {
+    id: "gallery-laminate-2",
+    title: "Herringbone laminate, room with patio doors",
+    category: "Laminate Flooring",
+    image: "/images/gallery/laminate-herringbone-room-patio.jpg",
+    alt: "Herringbone-pattern laminate flooring fitted in a bright room with patio doors",
+    description: "Herringbone laminate fitted in a bright, naturally lit room.",
+  },
+  {
+    id: "gallery-vinyl-2",
+    title: "Commercial vinyl flooring, betting shop reception",
+    category: "Vinyl Flooring",
+    image: "/images/gallery/vinyl-commercial-counter.jpg",
+    alt: "Wood-effect commercial vinyl flooring fitted at a betting shop reception counter",
+    description: "Durable vinyl fitted for a commercial reception area.",
+  },
+  {
+    id: "gallery-carpet-3",
+    title: "Carpet stairs and landing",
+    category: "Carpet Flooring",
+    image: "/images/gallery/carpet-charcoal-staircase.jpg",
+    alt: "Carpet fitted on a staircase and landing",
+    description: "Carpet fitted through a staircase and landing in one run.",
+  },
+  {
+    id: "gallery-laminate-3",
+    title: "Light oak laminate, bedroom",
+    category: "Laminate Flooring",
+    image: "/images/gallery/laminate-bright-empty-room.jpg",
+    alt: "Light oak laminate flooring fitted in a bedroom",
+    description: "Light laminate fitted for a bright, low-maintenance finish.",
+  },
+  {
+    id: "gallery-carpet-4",
+    title: "Chevron-pattern carpet, staircase",
+    category: "Carpet Flooring",
+    image: "/images/gallery/carpet-chevron-staircase-straight.jpg",
+    alt: "Black and cream chevron-pattern carpet fitted on a straight staircase",
+    description: "A bold chevron-pattern carpet fitted stair to stair.",
+  },
+  {
+    id: "gallery-laminate-4",
+    title: "Laminate flooring, open-plan room",
+    category: "Laminate Flooring",
+    image: "/images/gallery/laminate-living-room-garden.jpg",
+    alt: "Laminate flooring fitted in a bright open-plan room with a garden view",
+    description: "Laminate fitted through an open-plan family room.",
+  },
+  {
+    id: "gallery-carpet-5",
+    title: "Cream carpet, staircase and landing",
+    category: "Carpet Flooring",
+    image: "/images/gallery/carpet-cream-staircase.jpg",
+    alt: "Cream carpet fitted on a staircase and landing with a wood handrail",
+    description: "A clean, light carpet fit for a staircase and landing.",
+  },
+  {
+    id: "gallery-laminate-5",
+    title: "Laminate flooring, connecting rooms",
+    category: "Laminate Flooring",
+    image: "/images/gallery/laminate-connecting-rooms.jpg",
+    alt: "Laminate flooring fitted through two connecting rooms",
+    description: "Laminate fitted tight and level, room to room.",
+  },
+  {
+    id: "gallery-carpet-6",
+    title: "Cream carpet stairs",
+    category: "Carpet Flooring",
+    image: "/images/gallery/carpet-cream-staircase-run.jpg",
+    alt: "Cream carpet fitted on a straight run of stairs",
+    description: "Cream carpet fitted tight and even, step to step.",
+  },
+  {
+    id: "gallery-carpet-7",
+    title: "Tan carpet, curved staircase",
+    category: "Carpet Flooring",
+    image: "/images/gallery/carpet-curved-staircase-tan.jpg",
+    alt: "Tan carpet with black border trim fitted on a curved staircase",
+    description: "A curved staircase carpeted with a crisp border trim.",
+  },
+  {
+    id: "gallery-carpet-8",
+    title: "Herringbone-weave carpet runner",
+    category: "Carpet Flooring",
+    image: "/images/gallery/carpet-herringbone-runner-tan.jpg",
+    alt: "Tan herringbone-weave carpet runner with brown border trim fitted on a staircase",
+    description: "A herringbone-weave runner fitted with matching border trim.",
+  },
+  {
+    id: "gallery-carpet-9",
+    title: "Carpet staircase, oak handrail",
+    category: "Carpet Flooring",
+    image: "/images/gallery/carpet-oak-handrail-staircase.jpg",
+    alt: "Dark grey carpet fitted on a staircase with a varnished oak handrail and white balusters",
+    description: "A dark grey carpet fit finished with a varnished oak handrail.",
+  },
+  {
+    id: "gallery-carpet-10",
+    title: "Herringbone-weave carpet, hallway to stairs",
+    category: "Carpet Flooring",
+    image: "/images/gallery/carpet-herringbone-weave-staircase.jpg",
+    alt: "Black and cream herringbone-weave carpet fitted through a hallway and down a staircase",
+    description: "A herringbone-weave carpet fitted continuously from hallway to stairs.",
+  },
+  {
+    id: "gallery-laminate-6",
+    title: "Pale oak laminate, patio room",
+    category: "Laminate Flooring",
+    image: "/images/gallery/laminate-pale-oak-patio-view.jpg",
+    alt: "Pale oak-effect laminate flooring fitted in a bright room with patio doors",
+    description: "A light, washed-oak laminate fitted for a bright finish.",
+  },
+  {
+    id: "gallery-laminate-7",
+    title: "Laminate hallway and staircase",
+    category: "Laminate Flooring",
+    image: "/images/gallery/laminate-hallway-staircase-warm.jpg",
+    alt: "Warm-toned laminate flooring fitted through a hallway with a carpeted staircase leading off it",
+    description: "Laminate fitted through the hallway, flowing into the staircase carpet.",
+  },
+  {
+    id: "gallery-laminate-8",
+    title: "Herringbone laminate, kitchen",
+    category: "Laminate Flooring",
+    image: "/images/gallery/laminate-herringbone-navy-kitchen.jpg",
+    alt: "Herringbone-pattern laminate flooring fitted in a kitchen with navy cabinetry",
+    description: "Herringbone laminate fitted around a fitted kitchen.",
+  },
+  {
+    id: "gallery-vinyl-3",
+    title: "Commercial vinyl flooring, betting shop floor",
+    category: "Vinyl Flooring",
+    image: "/images/gallery/vinyl-commercial-betting-shop-floor.jpg",
+    alt: "Wood-effect commercial vinyl flooring fitted across a betting shop customer area",
+    description: "Commercial vinyl fitted across a busy customer floor area.",
+  },
+  {
+    id: "gallery-timber-1",
     title: "[STOCK PHOTO — replace with real project] Parquet floor, bedroom",
     category: "Timber Flooring",
     image:
@@ -134,43 +307,7 @@ export const galleryItems: GalleryItem[] = [
     description: "Example of the timber flooring look and finish we fit.",
   },
   {
-    id: "gallery-2",
-    title: "[STOCK PHOTO — replace with real project] Open-plan floor with staircase",
-    category: "Timber Flooring",
-    image:
-      "https://images.unsplash.com/photo-1646592491741-e79ae5953486?q=80&w=1800&auto=format&fit=crop",
-    alt: "Stock photo of an empty open-plan room with an engineered wood floor and staircase, used as a placeholder for a real Philip B Flooring project",
-    description: "One continuous timber floor run through an open-plan space.",
-  },
-  {
-    id: "gallery-3",
-    title: "[STOCK PHOTO — replace with real project] Laminate flooring, bedroom",
-    category: "Laminate Flooring",
-    image:
-      "https://images.unsplash.com/photo-1722650273431-9aefddd19151?q=80&w=1800&auto=format&fit=crop",
-    alt: "Stock photo of an empty bedroom with light laminate flooring, used as a placeholder for a real Philip B Flooring project",
-    description: "Light laminate fitted for a bright, low-maintenance finish.",
-  },
-  {
-    id: "gallery-4",
-    title: "[STOCK PHOTO — replace with real project] Laminate flooring, bedroom with door",
-    category: "Laminate Flooring",
-    image:
-      "https://images.unsplash.com/photo-1721901948510-e69c0eb88156?q=80&w=1800&auto=format&fit=crop",
-    alt: "Stock photo of an empty bedroom with light laminate flooring and a single door, used as a placeholder for a real Philip B Flooring project",
-    description: "Laminate fitted tight and level, room to room.",
-  },
-  {
-    id: "gallery-5",
-    title: "[STOCK PHOTO — replace with real project] Tiled-effect flooring",
-    category: "Vinyl Flooring",
-    image:
-      "https://images.unsplash.com/photo-1722348675233-e3af1abd4023?q=80&w=1800&auto=format&fit=crop",
-    alt: "Stock photo of a small empty room with a grey tiled-effect floor, used as a placeholder for a real Philip B Flooring vinyl project",
-    description: "The kind of clean, water-resistant finish vinyl gives a busy room.",
-  },
-  {
-    id: "gallery-6",
+    id: "gallery-prep-1",
     title: "[STOCK PHOTO — replace with real project] Hallway floor, transition detail",
     category: "Floor Preparation",
     image:
@@ -179,31 +316,13 @@ export const galleryItems: GalleryItem[] = [
     description: "Subfloors levelled and prepped before a board goes down.",
   },
   {
-    id: "gallery-7",
+    id: "gallery-repairs-1",
     title: "[STOCK PHOTO — replace with real project] Entrance hall floor",
     category: "Repairs & Finishing",
     image:
       "https://images.unsplash.com/photo-1722603929404-b29f53884a35?q=80&w=1800&auto=format&fit=crop",
     alt: "Stock photo of an empty entrance hallway with a honey-toned timber floor, used as a placeholder for a real Philip B Flooring project",
     description: "Worn entrance floors repaired and refinished.",
-  },
-  {
-    id: "gallery-8",
-    title: "[STOCK PHOTO — replace with real project] Bedroom floor, built-in wardrobe",
-    category: "Domestic & Commercial",
-    image:
-      "https://images.unsplash.com/photo-1722650363577-b1f6e1c191e3?q=80&w=1800&auto=format&fit=crop",
-    alt: "Stock photo of an empty room with a built-in wardrobe and honey-toned timber floor, used as a placeholder for a real Philip B Flooring project",
-    description: "Homes and business premises fitted to the same standard.",
-  },
-  {
-    id: "gallery-9",
-    title: "[STOCK PHOTO — replace with real project] Apartment floor, closet nook",
-    category: "Domestic & Commercial",
-    image:
-      "https://images.unsplash.com/photo-1721901950690-90d2df5385bd?q=80&w=1800&auto=format&fit=crop",
-    alt: "Stock photo of an empty apartment room with a closet nook and light timber floor, used as a placeholder for a real Philip B Flooring project",
-    description: "Fitted to the same finish whether it's a home or a unit.",
   },
 ];
 
@@ -306,8 +425,8 @@ export const trustBadges = [
 ];
 
 export const heroImage = {
-  src: "https://images.unsplash.com/photo-1722650362348-ef3034f6b864?q=80&w=2400&auto=format&fit=crop",
-  alt: "Stock photo of a bright, empty room with a warm parquet timber floor, used as a placeholder hero image",
+  src: "/images/hero-hallway.jpg",
+  alt: "Hallway and staircase fitted with wood-effect laminate flooring by Philip B Flooring",
 };
 
 export const whyUsImage = {
