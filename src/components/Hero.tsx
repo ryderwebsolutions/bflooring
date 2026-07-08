@@ -5,57 +5,82 @@ import { WhatsAppIcon } from "@/components/Header";
 
 export default function Hero() {
   return (
-    <section id="top" className="relative flex min-h-[92vh] items-end overflow-hidden sm:min-h-[85vh]">
-      <Image
-        src={heroImage.src}
-        alt={heroImage.alt}
-        fill
-        priority
-        sizes="100vw"
-        className="object-cover"
-      />
-      <div className="absolute inset-0 bg-gradient-to-t from-charcoal/85 via-charcoal/35 to-charcoal/10" />
+    <section id="top" className="relative overflow-hidden bg-sand">
+      <div className="mx-auto max-w-6xl px-4 pb-14 pt-10 sm:px-6 sm:pb-20 sm:pt-14 lg:px-8 lg:pb-24 lg:pt-16">
+        <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-16">
+          <div>
+            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-brand-dark sm:text-sm">
+              Dublin &middot; Meath &middot; Louth
+            </p>
+            <h1 className="max-w-xl font-heading text-4xl font-bold leading-[1.1] tracking-tight text-charcoal sm:text-5xl md:text-6xl">
+              Quality Flooring. Expert Finish.
+            </h1>
+            <p className="mt-5 max-w-lg text-base leading-relaxed text-charcoal/70 sm:text-lg">
+              Timber, laminate and vinyl flooring fitted for homes and
+              businesses across Dublin, Meath and Louth.
+            </p>
 
-      <div className="relative mx-auto w-full max-w-6xl px-4 pb-14 pt-32 sm:px-6 sm:pb-20 lg:px-8">
-        <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-cream/80 sm:text-sm">
-          Dublin &middot; Meath &middot; Louth
-        </p>
-        <h1 className="max-w-2xl font-heading text-4xl font-bold leading-[1.1] tracking-tight text-cream sm:text-5xl md:text-6xl">
-          Quality Flooring. Expert Finish.
-        </h1>
-        <p className="mt-5 max-w-lg text-base leading-relaxed text-cream/90 sm:text-lg">
-          Timber, laminate and vinyl flooring fitted for homes and businesses
-          across Dublin, Meath and Louth.
-        </p>
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <Link
+                href="/#contact"
+                className="flex h-14 items-center justify-center rounded-full bg-brand px-8 text-base font-semibold text-cream transition-colors hover:bg-brand-dark"
+              >
+                Get a Free Quote
+              </Link>
+              <a
+                href={business.whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex h-14 items-center justify-center gap-2 rounded-full bg-whatsapp px-8 text-base font-semibold text-white transition-colors hover:bg-whatsapp-dark"
+              >
+                <WhatsAppIcon /> WhatsApp
+              </a>
+            </div>
 
-        <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-          <Link
-            href="/#contact"
-            className="flex h-14 items-center justify-center rounded-full bg-brand px-8 text-base font-semibold text-cream transition-colors hover:bg-brand-dark"
-          >
-            Get a Free Quote
-          </Link>
-          <a
-            href={business.whatsappUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex h-14 items-center justify-center gap-2 rounded-full bg-whatsapp px-8 text-base font-semibold text-white transition-colors hover:bg-whatsapp-dark"
-          >
-            <WhatsAppIcon /> WhatsApp
-          </a>
-        </div>
+            <div className="mt-8 flex flex-wrap gap-x-3 gap-y-2">
+              {trustBadges.map((badge) => (
+                <span
+                  key={badge}
+                  className="inline-flex items-center gap-1.5 rounded-full border border-charcoal/10 bg-cream px-3 py-1.5 text-xs font-medium text-charcoal/80 sm:text-sm"
+                >
+                  <CheckIcon /> {badge}
+                </span>
+              ))}
+            </div>
+          </div>
 
-        <div className="mt-8 flex flex-wrap gap-x-6 gap-y-2">
-          {trustBadges.map((badge) => (
-            <span
-              key={badge}
-              className="text-xs font-medium tracking-wide text-cream/80 sm:text-sm"
-            >
-              {badge}
-            </span>
-          ))}
+          <div className="relative mx-auto w-full max-w-sm lg:max-w-none">
+            <div
+              aria-hidden="true"
+              className="absolute -inset-4 -z-10 rounded-[2rem] bg-brand/10 blur-2xl"
+            />
+            <div className="relative aspect-[3/4] w-full overflow-hidden rounded-3xl shadow-xl ring-1 ring-charcoal/10">
+              <Image
+                src={heroImage.src}
+                alt={heroImage.alt}
+                fill
+                priority
+                sizes="(min-width: 1024px) 45vw, 90vw"
+                className="object-cover"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </section>
+  );
+}
+
+function CheckIcon() {
+  return (
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path
+        d="M5 12.5l4.5 4.5L19 7"
+        stroke="currentColor"
+        strokeWidth="2.2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
   );
 }

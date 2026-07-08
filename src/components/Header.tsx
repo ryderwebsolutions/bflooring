@@ -43,6 +43,15 @@ export default function Header() {
 
             <div className="hidden lg:flex lg:items-center lg:gap-5">
               <a
+                href={business.instagramUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Philip B Flooring on Instagram"
+                className="text-charcoal/80 transition-colors hover:text-brand"
+              >
+                <InstagramIcon />
+              </a>
+              <a
                 href={business.phoneTel}
                 className="text-sm font-medium text-charcoal/80 transition-colors hover:text-brand"
               >
@@ -57,6 +66,15 @@ export default function Header() {
             </div>
 
             <div className="flex items-center gap-2 lg:hidden">
+              <a
+                href={business.instagramUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Philip B Flooring on Instagram"
+                className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-charcoal/15 text-charcoal"
+              >
+                <InstagramIcon />
+              </a>
               <a
                 href={business.phoneTel}
                 aria-label={`Call Philip B Flooring on ${business.phoneDisplay}`}
@@ -137,6 +155,16 @@ export function PhoneIcon() {
         d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1.1-.3 1.2.4 2.5.6 3.8.6.6 0 1.1.5 1.1 1.1v3.6c0 .6-.5 1.1-1.1 1.1C10.8 21.3 2.7 13.2 2.7 3.7c0-.6.5-1.1 1.1-1.1H7.4c.6 0 1.1.5 1.1 1.1 0 1.3.2 2.6.6 3.8.1.4 0 .8-.3 1.1L6.6 10.8z"
         fill="currentColor"
       />
+    </svg>
+  );
+}
+
+export function InstagramIcon() {
+  return (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <rect x="2.5" y="2.5" width="19" height="19" rx="5" stroke="currentColor" strokeWidth="1.8" />
+      <circle cx="12" cy="12" r="4.3" stroke="currentColor" strokeWidth="1.8" />
+      <circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" />
     </svg>
   );
 }
