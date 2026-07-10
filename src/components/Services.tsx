@@ -5,7 +5,12 @@ import Image from "next/image";
 import { services } from "@/lib/content";
 import Reveal from "@/components/Reveal";
 
-export default function Services() {
+export default function Services({
+  headingLevel = "h2",
+}: {
+  headingLevel?: "h1" | "h2";
+}) {
+  const Heading = headingLevel;
   const [activeId, setActiveId] = useState(services[0].id);
   const activeIndex = services.findIndex((s) => s.id === activeId);
 
@@ -13,9 +18,9 @@ export default function Services() {
     <section id="services" className="bg-cream py-20 sm:py-28">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <Reveal>
-          <h2 className="max-w-xl font-heading text-3xl font-bold tracking-tight text-charcoal sm:text-4xl">
+          <Heading className="max-w-xl font-heading text-3xl font-bold tracking-tight text-charcoal sm:text-4xl">
             Flooring Fitted Right, First Time
-          </h2>
+          </Heading>
           <p className="mt-4 max-w-xl text-base text-charcoal/70 sm:text-lg">
             Supply and fitting for every stage of the job, from prepping the
             subfloor to the last skirting board.

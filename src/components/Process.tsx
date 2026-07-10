@@ -1,14 +1,20 @@
 import { processSteps } from "@/lib/content";
 import Reveal from "@/components/Reveal";
 
-export default function Process() {
+export default function Process({
+  headingLevel = "h2",
+}: {
+  headingLevel?: "h1" | "h2";
+}) {
+  const Heading = headingLevel;
+
   return (
     <section id="process" className="bg-charcoal py-20 text-cream sm:py-28">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <Reveal>
-          <h2 className="max-w-xl font-heading text-3xl font-bold tracking-tight sm:text-4xl">
+          <Heading className="max-w-xl font-heading text-3xl font-bold tracking-tight sm:text-4xl">
             From Quote to Finished Floor
-          </h2>
+          </Heading>
         </Reveal>
 
         <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">

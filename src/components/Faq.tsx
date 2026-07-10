@@ -14,7 +14,13 @@ const faqJsonLd = {
   })),
 };
 
-export default function Faq() {
+export default function Faq({
+  headingLevel = "h2",
+}: {
+  headingLevel?: "h1" | "h2";
+}) {
+  const Heading = headingLevel;
+
   return (
     <section id="faq" className="bg-cream py-20 sm:py-28">
       <script
@@ -23,9 +29,9 @@ export default function Faq() {
       />
       <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
         <Reveal>
-          <h2 className="font-heading text-3xl font-bold tracking-tight text-charcoal sm:text-4xl">
+          <Heading className="font-heading text-3xl font-bold tracking-tight text-charcoal sm:text-4xl">
             Common Questions
-          </h2>
+          </Heading>
         </Reveal>
 
         <div className="mt-8 border-t border-charcoal/10">

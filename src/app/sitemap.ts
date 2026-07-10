@@ -3,7 +3,16 @@ import type { MetadataRoute } from "next";
 const siteUrl = "https://www.philipbflooring.ie";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const routes = ["", "/our-work", "/contact"];
+  const routes = [
+    "",
+    "/services",
+    "/our-work",
+    "/why-us",
+    "/process",
+    "/areas-we-cover",
+    "/faq",
+    "/contact",
+  ];
 
   return routes.map((route) => ({
     url: `${siteUrl}${route}`,

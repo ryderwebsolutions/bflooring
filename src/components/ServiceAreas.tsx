@@ -5,14 +5,20 @@ const MAP_EMBED_URL =
   "https://maps.google.com/maps?ll=53.66,-6.45&z=9&output=embed";
 const MAP_LINK_URL = "https://www.google.com/maps/@53.66,-6.45,9z";
 
-export default function ServiceAreas() {
+export default function ServiceAreas({
+  headingLevel = "h2",
+}: {
+  headingLevel?: "h1" | "h2";
+}) {
+  const Heading = headingLevel;
+
   return (
     <section id="areas" className="bg-sand py-20 sm:py-28">
       <div className="mx-auto max-w-5xl px-4 text-center sm:px-6 lg:px-8">
         <Reveal>
-          <h2 className="font-heading text-3xl font-bold tracking-tight text-charcoal sm:text-4xl">
+          <Heading className="font-heading text-3xl font-bold tracking-tight text-charcoal sm:text-4xl">
             Areas We Cover
-          </h2>
+          </Heading>
           <p className="mx-auto mt-4 max-w-md text-base text-charcoal/70 sm:text-lg">
             Based in Dublin, fitting flooring across Dublin, Meath and Louth.
           </p>

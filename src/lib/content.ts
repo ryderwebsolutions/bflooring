@@ -21,13 +21,13 @@ export const business = {
 };
 
 export const nav = [
-  { label: "Services", href: "/#services" },
-  { label: "Our Work", href: "/#gallery" },
-  { label: "Why Us", href: "/#why-us" },
-  { label: "Process", href: "/#process" },
-  { label: "Areas We Cover", href: "/#areas" },
-  { label: "FAQ", href: "/#faq" },
-  { label: "Contact", href: "/#contact" },
+  { label: "Services", href: "/services" },
+  { label: "Our Work", href: "/our-work" },
+  { label: "Why Us", href: "/why-us" },
+  { label: "Process", href: "/process" },
+  { label: "Areas We Cover", href: "/areas-we-cover" },
+  { label: "FAQ", href: "/faq" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export type Service = {

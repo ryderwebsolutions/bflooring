@@ -31,13 +31,13 @@ export default function Header() {
 
             <nav className="hidden lg:flex lg:items-center lg:gap-8">
               {nav.map((item) => (
-                <a
+                <Link
                   key={item.href}
                   href={item.href}
                   className="text-sm font-medium text-charcoal/80 transition-colors hover:text-brand"
                 >
                   {item.label}
-                </a>
+                </Link>
               ))}
             </nav>
 
@@ -100,14 +100,14 @@ export default function Header() {
         <div className="fixed inset-0 top-16 z-40 flex flex-col bg-cream md:top-20 lg:hidden">
           <nav className="flex flex-1 flex-col items-stretch gap-1 overflow-y-auto px-6 py-8">
             {nav.map((item) => (
-              <a
+              <Link
                 key={item.href}
                 href={item.href}
                 onClick={() => setOpen(false)}
                 className="flex min-h-[44px] items-center border-b border-taupe/15 py-4 text-lg font-medium text-charcoal"
               >
                 {item.label}
-              </a>
+              </Link>
             ))}
           </nav>
           <div className="flex flex-col gap-3 px-6 pb-8">
