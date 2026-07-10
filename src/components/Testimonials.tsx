@@ -1,4 +1,4 @@
-import { testimonials } from "@/lib/content";
+import { business, testimonials } from "@/lib/content";
 import Reveal from "@/components/Reveal";
 
 const hasRealReviews = testimonials.some((t) => !t.id.startsWith("placeholder"));
@@ -30,9 +30,24 @@ export default function Testimonials() {
     <section className="bg-cream py-20 sm:py-28">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <Reveal>
-          <h2 className="max-w-xl font-heading text-3xl font-bold tracking-tight text-charcoal sm:text-4xl">
-            What Clients Say
-          </h2>
+          <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+            <div>
+              <h2 className="max-w-xl font-heading text-3xl font-bold tracking-tight text-charcoal sm:text-4xl">
+                What Clients Say
+              </h2>
+              <p className="mt-3 text-sm text-charcoal/70 sm:text-base">
+                Real reviews from Google.
+              </p>
+            </div>
+            <a
+              href={business.googleProfileUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex h-12 shrink-0 items-center justify-center rounded-full border border-charcoal/20 px-6 text-sm font-semibold text-charcoal transition-colors hover:border-brand hover:text-brand"
+            >
+              Leave Us a Review
+            </a>
+          </div>
         </Reveal>
 
         <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">

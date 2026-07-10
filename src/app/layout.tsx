@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Archivo, Inter } from "next/font/google";
 import "./globals.css";
-import { business, heroImage } from "@/lib/content";
+import { business, heroImage, testimonials } from "@/lib/content";
 import StickyMobileCta from "@/components/StickyMobileCta";
 
 const archivo = Archivo({
@@ -57,6 +57,20 @@ export const metadata: Metadata = {
   },
 };
 
+const ratedReviews = testimonials.filter(
+  (t): t is typeof t & { rating: number } => typeof t.rating === "number",
+);
+const aggregateRating =
+  ratedReviews.length > 0
+    ? {
+        "@type": "AggregateRating" as const,
+        ratingValue: (
+          ratedReviews.reduce((sum, t) => sum + t.rating, 0) / ratedReviews.length
+        ).toFixed(1),
+        reviewCount: ratedReviews.length,
+      }
+    : undefined;
+
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "HomeAndConstructionBusiness",
@@ -73,7 +87,8 @@ const jsonLd = {
     addressLocality: business.addressLocality,
     addressCountry: business.addressCountry,
   },
-  sameAs: [business.instagramUrl],
+  sameAs: [business.instagramUrl, business.googleProfileUrl],
+  ...(aggregateRating ? { aggregateRating } : {}),
 };
 
 export default function RootLayout({

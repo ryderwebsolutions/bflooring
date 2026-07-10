@@ -46,6 +46,16 @@ export default function Footer() {
                   {business.instagramHandle}
                 </a>
               </li>
+              <li>
+                <a
+                  href={business.googleProfileUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-brand"
+                >
+                  Google Reviews
+                </a>
+              </li>
             </ul>
           </div>
 

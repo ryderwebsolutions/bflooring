@@ -14,6 +14,7 @@ export const business = {
   emailUrl: "mailto:philipbflooring@gmail.com",
   instagramHandle: "@philipbflooring",
   instagramUrl: "https://www.instagram.com/philipbflooring",
+  googleProfileUrl: "https://maps.app.goo.gl/USNqy1FpBEZTGoHt9",
   areas: ["Dublin", "Meath", "Louth"],
   addressLocality: "Dublin",
   addressCountry: "IE",
@@ -338,15 +339,80 @@ export type Testimonial = {
   rating?: number;
 };
 
-// No verified reviews yet. Keep this array empty (or with clearly marked
-// placeholders only) until Philip supplies real Google reviews with names,
-// quotes and star ratings. Never invent a testimonial.
+// Real Google reviews, supplied by Philip and transcribed verbatim (typos
+// and all — these are direct quotes, not copy). Only Katie O'Connor's is
+// trimmed to a contiguous excerpt, marked with [...], because the full
+// review is several paragraphs long and breaks the card grid at full length.
 export const testimonials: Testimonial[] = [
   {
-    id: "placeholder-1",
-    name: "[PLACEHOLDER — insert real client name]",
-    quote: "[PLACEHOLDER — insert real client review]",
-    rating: undefined,
+    id: "natalia-gould",
+    name: "Natalia Gould",
+    quote:
+      "I am absolutely delighted with the work PhilipB Flooring did in my home. From the very beginning Philip was brilliant, he came out to the house, took his time showing carpet colours and made the whole process feel easy and down to earth. His team were fantastic too, friendly, professional, quick and lovely to deal with. The finished result is fabulous. My stairs, landing and rooms look completely transformed and the quality of the fitting is outstanding. I'd highly recommend PhilipB Flooring to anyone looking for top class carpet work.",
+    rating: 5,
+  },
+  {
+    id: "patrick-ryan",
+    name: "Patrick Ryan",
+    quote:
+      "Philip laid a new carpet on our stairs and landing. Philip answered every call and text message and he arrived at the time he promised. Philip did a great job and cleaned up after him. I fully recommend Philip.",
+    rating: 5,
+  },
+  {
+    id: "katie-oconnor",
+    name: "Katie O'Connor",
+    quote:
+      "Philip called out the day after I called him with samples of floors and carpet, we just bought our first home and have never done anything like this before so choosing colours and styles was new because we wanted to make it right. [...] If there was 10 stars these lads would be getting it. Thank you Philip and the team for making our vision real. — Katie & Luke",
+    rating: 5,
+  },
+  {
+    id: "daryl-casey",
+    name: "Daryl Casey",
+    quote:
+      "We had an excellent experience with Phillip B Flooring. The carpet fitting was completed to a very high standard, with great attention to detail and a professional finish. Phillip was punctual, friendly, and took pride in his work. The whole process was smooth from start to finish, and the new carpet looks fantastic. We couldn't be happier with the result and would highly recommend Phillip B Flooring to anyone looking for quality flooring and excellent service.",
+    rating: 5,
+  },
+  {
+    id: "jennifer-mccann",
+    name: "Jennifer McCann",
+    quote:
+      "I would highly recommend Philip. He called out with lots of samples to pick from. When the carpet I picked wasn't available, he made a lot of effort to get one that matched as best as possible. I wouldn't have noticed the difference. The carpets were fitted really well and he was able to fit them a few days after he called out to my house. Really honest and a lovely person to deal with.",
+    rating: 5,
+  },
+  {
+    id: "shauna-howard",
+    name: "Shauna Howard",
+    quote:
+      "Great experience, super quick and carpet was beautiful and great quality, highly recommend.",
+    rating: 5,
+  },
+  {
+    id: "nicola-farrell",
+    name: "Nicola Farrell",
+    quote:
+      "We had Philip do our floors today, Laminate's and new carpet on two sets of stairs. He was a pleasure to deal with from start to finish. He showed us loads of sample's and very quick to fit them. He fixed up a mess from a previous company and I was delighted when i got home and saw the finished job. Top class! Will definitely recommend him to everyone. Thanks Philip.",
+    rating: 5,
+  },
+  {
+    id: "kate-gilligan",
+    name: "Kate Gilligan",
+    quote:
+      "Philip did our laminate floors last week and i must say 10 out of 10 he did a fantastic job. He was so easy to deal with, showed us samples and was ready to go within days of us having him out to measure the floors. Can't wait to get my carpets done on the stairs with him. Thanks again Philip and lads.",
+    rating: 5,
+  },
+  {
+    id: "jennifer-xx",
+    name: "Jennifer",
+    quote:
+      "Philip did my laminate flooring and carpet on the stairs, the floor was put down excellent & within such a short time. Great service and beautiful job. Thanks a mill.",
+    rating: 5,
+  },
+  {
+    id: "rebecca-mcdonnell",
+    name: "Rebecca McDonnell",
+    quote:
+      "I recently used Philip B flooring for moving into my new build home. We had to get the entire house done & Philip was great from start to finish. He came out to measure & even brought samples with him! I got a quote that evening & there was no hidden charges. The price was fantastic in comparison to what some other main flooring stores were quoting us! Philip & his team did my 3 bed house in one day! I got carpets on the stairs & all 3 bedrooms along with wooden floors throughout the downstairs of the house. Overall I couldn't recommend Philip B flooring more, very professional & a really great job.",
+    rating: 5,
   },
 ];
 
