@@ -418,6 +418,7 @@ export const faqs: Faq[] = [
 ];
 
 export const trustBadges = [
+  "25 Years' Experience",
   "Domestic & Commercial",
   "Fully Insured",
   "Dublin, Meath & Louth",
