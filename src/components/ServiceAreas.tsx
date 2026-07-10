@@ -2,8 +2,8 @@ import { business } from "@/lib/content";
 import Reveal from "@/components/Reveal";
 
 const MAP_EMBED_URL =
-  "https://maps.google.com/maps?ll=53.62,-6.55&z=8&output=embed";
-const MAP_LINK_URL = "https://www.google.com/maps/@53.62,-6.55,8z";
+  "https://maps.google.com/maps?ll=53.66,-6.45&z=9&output=embed";
+const MAP_LINK_URL = "https://www.google.com/maps/@53.66,-6.45,9z";
 
 export default function ServiceAreas() {
   return (
@@ -43,7 +43,7 @@ export default function ServiceAreas() {
               href={MAP_LINK_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="absolute bottom-3 right-3 flex h-10 items-center gap-2 rounded-full bg-charcoal/90 px-4 text-xs font-semibold text-cream backdrop-blur transition-colors hover:bg-charcoal sm:text-sm"
+              className="absolute right-3 top-3 flex h-10 items-center gap-2 rounded-full bg-charcoal/90 px-4 text-xs font-semibold text-cream backdrop-blur transition-colors hover:bg-charcoal sm:text-sm"
             >
               Open in Google Maps
             </a>

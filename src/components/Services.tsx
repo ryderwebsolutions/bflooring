@@ -86,19 +86,21 @@ export default function Services() {
 
           <div className="hidden lg:col-span-6 lg:block xl:col-span-7">
             <div className="sticky top-28 aspect-[4/5] overflow-hidden rounded-2xl">
-              {services.map((service, i) => (
-                <Image
-                  key={service.id}
-                  src={service.image}
-                  alt={service.alt}
-                  fill
-                  loading={i === 0 ? "eager" : "lazy"}
-                  sizes="(min-width: 1024px) 45vw, 0px"
-                  className={`object-cover transition-opacity duration-500 ease-out ${
-                    i === activeIndex ? "opacity-100" : "opacity-0"
-                  }`}
-                />
-              ))}
+              <div className="relative h-full w-full">
+                {services.map((service, i) => (
+                  <Image
+                    key={service.id}
+                    src={service.image}
+                    alt={service.alt}
+                    fill
+                    loading={i === 0 ? "eager" : "lazy"}
+                    sizes="(min-width: 1024px) 45vw, 0px"
+                    className={`object-cover transition-opacity duration-500 ease-out ${
+                      i === activeIndex ? "opacity-100" : "opacity-0"
+                    }`}
+                  />
+                ))}
+              </div>
             </div>
           </div>
         </div>

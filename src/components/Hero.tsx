@@ -1,7 +1,7 @@
-import Image from "next/image";
 import Link from "next/link";
-import { business, heroImage, trustBadges } from "@/lib/content";
+import { business, trustBadges } from "@/lib/content";
 import { WhatsAppIcon } from "@/components/Header";
+import HeroCarousel from "@/components/HeroCarousel";
 
 export default function Hero() {
   return (
@@ -49,22 +49,7 @@ export default function Hero() {
             </div>
           </div>
 
-          <div className="relative mx-auto w-full max-w-sm lg:max-w-none">
-            <div
-              aria-hidden="true"
-              className="absolute -inset-4 -z-10 rounded-[2rem] bg-brand/10 blur-2xl"
-            />
-            <div className="relative aspect-[3/4] w-full overflow-hidden rounded-3xl shadow-xl ring-1 ring-charcoal/10">
-              <Image
-                src={heroImage.src}
-                alt={heroImage.alt}
-                fill
-                priority
-                sizes="(min-width: 1024px) 45vw, 90vw"
-                className="object-cover"
-              />
-            </div>
-          </div>
+          <HeroCarousel />
         </div>
       </div>
     </section>

@@ -88,7 +88,7 @@ export const services: Service[] = [
     id: "prep",
     title: "Floor Preparation",
     description:
-      "Subfloors levelled and prepped properly before a single board goes down.",
+      "Subfloors levelled and prepped before a single board goes down.",
     image:
       "https://images.unsplash.com/photo-1727872496300-57e476478a54?q=80&w=1600&auto=format&fit=crop",
     alt: "[STOCK PHOTO — replace with real project] Empty hallway leading into a bright room with a timber floor, used as a placeholder image",
@@ -106,7 +106,7 @@ export const services: Service[] = [
     id: "commercial",
     title: "Domestic & Commercial Flooring",
     description:
-      "Homes and business premises both fitted to the same professional standard.",
+      "Shops, offices and homes fitted to the same standard, no shortcuts.",
     image: "/images/gallery/vinyl-commercial-counter.jpg",
     alt: "Commercial vinyl flooring fitted in a betting shop reception by Philip B Flooring",
   },
@@ -403,8 +403,7 @@ export const faqs: Faq[] = [
   },
   {
     question: "Do you only do homes, or businesses too?",
-    answer:
-      "Both. Homes and business premises are fitted to the same professional standard.",
+    answer: "Both. The standard doesn't change between a house and a business.",
   },
   {
     question: "What happens after I get in touch?",
@@ -429,6 +428,49 @@ export const heroImage = {
   alt: "Hallway and staircase fitted with wood-effect laminate flooring by Philip B Flooring",
 };
 
+export type HeroSlide = {
+  id: string;
+  image: string;
+  alt: string;
+  cta: string;
+  href: string;
+};
+
+// Hero carousel slides. Each image is a real Philip B Flooring job photo at
+// the same 3:4 aspect as heroImage, so none of them need to be cropped by
+// the carousel's fixed aspect-ratio frame — pick replacements with the same
+// 1536x2048 dimensions to keep it that way.
+export const heroSlides: HeroSlide[] = [
+  {
+    id: "services",
+    image: heroImage.src,
+    alt: heroImage.alt,
+    cta: "Explore our flooring services",
+    href: "/#services",
+  },
+  {
+    id: "gallery",
+    image: "/images/gallery/carpet-chevron-staircase-straight.jpg",
+    alt: "Black and cream chevron-pattern carpet fitted on a straight staircase",
+    cta: "See more of our finished work",
+    href: "/#gallery",
+  },
+  {
+    id: "contact",
+    image: "/images/gallery/laminate-living-room-garden.jpg",
+    alt: "Laminate flooring fitted in a bright open-plan room with a garden view",
+    cta: "Get in touch for a free quote",
+    href: "/#contact",
+  },
+  {
+    id: "faq",
+    image: "/images/gallery/laminate-pale-oak-patio-view.jpg",
+    alt: "Pale oak-effect laminate flooring fitted in a bright room with patio doors",
+    cta: "Got questions? Check our FAQ",
+    href: "/#faq",
+  },
+];
+
 export const whyUsImage = {
   src: "/van.jpg",
   alt: "Philip B Flooring's branded work van, showing the phone number, email and service area",
@@ -436,7 +478,7 @@ export const whyUsImage = {
 
 export const whyUsPoints = [
   {
-    title: "Professional workmanship",
+    title: "Careful workmanship",
     description: "Every floor fitted with the same care, start to finish.",
   },
   {
@@ -449,7 +491,7 @@ export const whyUsPoints = [
   },
   {
     title: "Attention to detail",
-    description: "Joins, edges and transitions done properly, not rushed.",
+    description: "Joins, edges and transitions done right, not rushed.",
   },
   {
     title: "Homes and businesses",
