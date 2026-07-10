@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { business, trustBadges } from "@/lib/content";
+import { business } from "@/lib/content";
 import { WhatsAppIcon } from "@/components/Header";
 import HeroCarousel from "@/components/HeroCarousel";
 
@@ -36,36 +36,11 @@ export default function Hero() {
                 <WhatsAppIcon /> WhatsApp
               </a>
             </div>
-
-            <div className="mt-8 flex flex-wrap gap-x-3 gap-y-2">
-              {trustBadges.map((badge) => (
-                <span
-                  key={badge}
-                  className="inline-flex items-center gap-1.5 rounded-full border border-charcoal/10 bg-cream px-3 py-1.5 text-xs font-medium text-charcoal/80 sm:text-sm"
-                >
-                  <CheckIcon /> {badge}
-                </span>
-              ))}
-            </div>
           </div>
 
           <HeroCarousel />
         </div>
       </div>
     </section>
-  );
-}
-
-function CheckIcon() {
-  return (
-    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-      <path
-        d="M5 12.5l4.5 4.5L19 7"
-        stroke="currentColor"
-        strokeWidth="2.2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
   );
 }

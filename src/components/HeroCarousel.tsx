@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { heroSlides } from "@/lib/content";
 
-const AUTO_ADVANCE_MS = 5000;
+const AUTO_ADVANCE_MS = 3000;
 
 export default function HeroCarousel() {
   const [active, setActive] = useState(0);
